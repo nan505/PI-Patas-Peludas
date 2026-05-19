@@ -1,7 +1,16 @@
+nav{
+    background-color: #BFDBF7;
+}
+
 .titulo{
     font-family: Martel;
+    font-weight: bold;
 }
 
 .texto{
     font-family: Lato;
+}
+
+.img-logo-ong{
+    border-radius: 50%;
 }
