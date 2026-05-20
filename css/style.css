@@ -1,0 +1,24 @@
+#navbar-inicio{
+    background-color: #BFDBF7;
+}
+
+#rodape{
+    background-color: #022B3A;
+}
+
+.titulo{
+    font-family: Martel;
+    font-weight: bold;
+}
+
+.texto{
+    font-family: Lato;
+}
+
+.img-logo-ong{
+    border-radius: 50%;
+}
+
+.banner-carrossel{
+    height: 540px;
+}
