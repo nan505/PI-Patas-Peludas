@@ -1,40 +1,13 @@
 <?php
 
-$titulo_pagina = "ONG Patas Peludas";
+$titulo_pagina = "ONG Patinhas Peludas";
 include "inc-head.php";
 
 ?>
 
 <body class="bg-light pt-5">
     <header>
-<!-- Navbar feita por: Nan Santos -->
-        <nav id="navbar-inicio" class="navbar fixed-top navbar-expand-md">
-            <div class="container-fluid">
-                <a class="navbar-brand fs-2 titulo d-flex align-items-center pt-2 me-4" href="#">
-                    <img src="./img/logo-patas-peludas.jpg" width="52px" class="d-inline-block me-3 ms-4 img-logo-ong">
-                    Patas Peludas
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse align-items-center" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active fs-4 texto" aria-current="page" href="#">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fs-4 texto" href="./sobre.html">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fs-4 texto" href="./galeria.html">Galeria</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fs-4 texto" href="./contato.html">Contato</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <?php include "inc-nav.php"; ?>
 
 <!-- Carrossel feito por: Nan Santos -->
 <!-- Importante: Mudar o "src" e o "alt" das imagens assim que possível -->
@@ -73,7 +46,7 @@ include "inc-head.php";
 <!-- Seção de introdução e fotos feita por: Nan Santos -->
     <section class="container mt-4">
         <div class="d-flex flex-column align-items-center">
-            <h1 class="titulo">Patas Peludas</h1>
+            <h1 class="titulo">Patinhas Peludas</h1>
             <h2 class="texto">Gatos amados e bem cuidados!</h2>
         </div>
 
@@ -86,10 +59,10 @@ include "inc-head.php";
 
             <div class="row">
                 <div class="col-6">
-                    <img width="600px" height="300px" class="object-fit-cover rounded img-fluid" src="./img/gatoguerra.jpg">
+                    <img class="object-fit-cover rounded img-galeria" src="./img/gatoguerra.jpg">
                 </div>
                 <div class="col-6">
-                    <img width="600px" height="300px" class="object-fit-cover rounded img-fluid" src="./img/gatoguerra.jpg">
+                    <img class="object-fit-cover rounded img-galeria" src="./img/gatoguerra.jpg">
                 </div>
             </div>
 
@@ -99,18 +72,57 @@ include "inc-head.php";
     </section>
 
 <!-- Seção de reviews feita por: Nan Santos -->
-    <section class="container">
+    <section class="container mt-4">
         <div class="row">
+            <div class="col-12">
+                <h3 class="titulo">Análises:</h3>
+            </div>
+        </div>
+
+        <div class="row">
+
             <div class="col-4">
                 <div class="card">
                     <div class="row">
                         <div class="col-4">
                             <img src="./img/gatoguerra.jpg" class="img-fluid rounded" alt="...">
                         </div>
-                        <div class="col-4"></div>
+                        <div class="col-8">
+                            <h4>Card de review!</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="col-4">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="./img/gatoguerra.jpg" class="img-fluid rounded" alt="...">
+                        </div>
+                        <div class="col-8">
+                            <h4>Card de review!</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="./img/gatoguerra.jpg" class="img-fluid rounded" alt="...">
+                        </div>
+                        <div class="col-8">
+                            <h4>Card de review!</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
