@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONG Patas Peludas</title>
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Martel:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet">
-</head>
+<?php
 
-<body class="bg-light">
+$titulo_pagina = "ONG Patas Peludas";
+include "inc-head.php";
+
+?>
+
+<body class="bg-light pt-5">
     <header>
-
 <!-- Navbar feita por: Nan Santos -->
-        <nav id="navbar-inicio" class="navbar navbar-expand-md">
+        <nav id="navbar-inicio" class="navbar fixed-top navbar-expand-md">
             <div class="container-fluid">
                 <a class="navbar-brand fs-2 titulo d-flex align-items-center pt-2 me-4" href="#">
                     <img src="./img/logo-patas-peludas.jpg" width="52px" class="d-inline-block me-3 ms-4 img-logo-ong">
@@ -94,10 +86,10 @@
 
             <div class="row">
                 <div class="col-6">
-                    <img width="600px" height="300px" class="object-fit-cover" src="./img/gatoguerra.jpg">
+                    <img width="600px" height="300px" class="object-fit-cover rounded img-fluid" src="./img/gatoguerra.jpg">
                 </div>
                 <div class="col-6">
-                    <img width="600px" height="300px" class="object-fit-cover" src="./img/gatoguerra.jpg">
+                    <img width="600px" height="300px" class="object-fit-cover rounded img-fluid" src="./img/gatoguerra.jpg">
                 </div>
             </div>
 
@@ -106,35 +98,20 @@
         </main>
     </section>
 
-<!-- Rodapé feito por: Nan Santos -->
-    <footer id="rodape" class="mt-5">
-        <main class="container">
-            <div class="row">
-                <div class="col-4">
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-1">
-                            <a class="nav-link active fs-5 texto text-light p-0" aria-current="page" href="#">Início</a>
-                        </li>
-                        <li class="nav-item mb-1">
-                            <a class="nav-link fs-5 texto text-light p-0" href="./sobre.html">Sobre</a>
-                        </li>
-                        <li class="nav-item mb-1">
-                            <a class="nav-link fs-5 texto text-light p-0" href="./galeria.html">Galeria</a>
-                        </li>
-                        <li class="nav-item mb-1">
-                            <a class="nav-link fs-5 texto text-light p-0" href="./contato.html">Contato</a>
-                        </li>
-                    </ul>      
+<!-- Seção de reviews feita por: Nan Santos -->
+    <section class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="./img/gatoguerra.jpg" class="img-fluid rounded" alt="...">
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
                 </div>
-
-                <div class="col-4 align-items-center justify-content-center text-center">
-                    <p class="text-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum tempore doloremque doloribus natus laborum ut nulla facilis, praesentium iusto quaerat voluptatem culpa magni? Quia, sed aut sapiente hic deserunt corporis?</p>
-                </div>
-
             </div>
-        </main>
-    </footer>
+        </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
-</html>
+<?php include "inc-footer.php"; ?>
