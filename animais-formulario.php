@@ -6,16 +6,22 @@ include "inc-head.php";
 ?>
 
 <body class="bg-light pt-5">
-    <header>
+    <header class="mb-5">
         <?php include "inc-nav.php"; ?>
+    </header>
 
         <section class="container">
             <form action="animais-salvar.php" method="post">
-                <label>Nome do animal:</label>
-                <input type="text" value="nome">
+                <label>Nome do animal:</label><br>
+                <input type="text" name="nome"><br>
 
-                <label>O animal foi vermifugado?</label>
-                
+                <br>
+
+                <label>O animal foi vermifugado?</label><br>
+                <input type="radio" name="animal_foi_vermifugado" value="sim">
+                <label>Sim</label><br>
+                <input type="radio" name="animal_foi_vermifugado" value="nao">
+                <label>Não</label>
             </form>
         </section>
 
