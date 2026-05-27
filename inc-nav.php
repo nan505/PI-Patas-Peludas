@@ -11,13 +11,13 @@
         <div class="collapse navbar-collapse align-items-center" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active fs-4 texto" aria-current="page" href="#">Início</a>
+                    <a class="nav-link active fs-4 texto" aria-current="page" href="./index.php">Início</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fs-4 texto" href="./sobre.html">Sobre</a>
+                    <a class="nav-link fs-4 texto" href="./sobre.php">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fs-4 texto" href="./galeria.html">Galeria</a>
+                    <a class="nav-link fs-4 texto" href="./galeria.php">Galeria</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fs-4 texto" href="./contato.html">Contato</a>

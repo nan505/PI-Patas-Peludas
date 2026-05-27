@@ -6,13 +6,13 @@
                     <nav>
                         <ul class="nav flex-column align-items-start">
                             <li class="nav-item mb-1">
-                                <a class="nav-link active fs-5 texto text-light p-0 w-auto" aria-current="page" href="#">Início</a>
+                                <a class="nav-link active fs-5 texto text-light p-0 w-auto" aria-current="page" href="./index.php">Início</a>
                             </li>
                             <li class="nav-item mb-1">
-                                <a class="nav-link fs-5 texto text-light p-0" href="./sobre.html">Sobre</a>
+                                <a class="nav-link fs-5 texto text-light p-0" href="./sobre.php">Sobre</a>
                             </li>
                             <li class="nav-item mb-1">
-                                <a class="nav-link fs-5 texto text-light p-0" href="./galeria.html">Galeria</a>
+                                <a class="nav-link fs-5 texto text-light p-0" href="./galeria.php">Galeria</a>
                             </li>
                             <li class="nav-item mb-1">
                                 <a class="nav-link fs-5 texto text-light p-0" href="./contato.html">Contato</a>
