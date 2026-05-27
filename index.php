@@ -43,6 +43,18 @@ include "inc-head.php";
 
     </header>
 
+    <div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col">
+      <h1 class="mt-5">Um pouco sobre nós:</h1>
+      <p class="texto-sobre">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam iusto fuga tenetur asperiores reiciendis magni? Dicta dolores a hic temporibus commodi expedita aperiam nisi. Repudiandae necessitatibus similique iusto fugiat dolorem?</p>  
+    </div>
+    <div class="col mt-5">
+      <img src="./img/gatoguerra.jpg" alt="gato-de-guerra">
+    </div>  
+  </div>
+</div>
+
 <!-- Seção de introdução e fotos feita por: Nan Santos -->
     <section class="container mt-4">
         <div class="d-flex flex-column align-items-center">
