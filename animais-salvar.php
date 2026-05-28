@@ -1,11 +1,22 @@
 <?php
 
-$nome = $_POST['nome'];
-$foi_vermifugado = $_POST['foi_vermifugado'];
-$possui_doenca = $_POST['possui_doenca'];
-$foi_castrado = $_POST['foi_castrado'];
+$nome = trim($_POST['nome']);
+$string_foi_vermifugado = $_POST['foi_vermifugado'];
+$possui_doenca = trim($_POST['possui_doenca']);
+$string_foi_castrado = $_POST['foi_castrado'];
 $idade = $_POST['idade'];
-$url_imagem = $_POST['url_imagem'];
+$url_imagem = trim($_POST['url_imagem']);
+
+$foi_vermifugado = 0;
+$foi_castrado = 0;
+
+if($string_foi_vermifugado == "sim"){
+    $foi_vermifugado = 1;
+}
+
+if($string_foi_castrado == "sim"){
+    $foi_castrado = 1;
+}
 
 include "inc-conexao.php";
 
