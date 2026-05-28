@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-<?php $titulo_pagina = "ONG Patinhas Peludas";
-include "inc-head.php";?>
-
-<body>
-    <header>
-        <nav class="navbar navbar-expand-md bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./img/logo-patas-peludas.jpg" width="30px" class="d-inline-block align-text-top">
-                    Patas Peludas
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Galeria</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-=======
 <?php 
 $titulo_pagina = "Sobre";
 include "inc-head.php";  ?>
@@ -40,7 +6,6 @@ include "inc-head.php";  ?>
       <?php 
       include "inc-nav.php";
       ?>
->>>>>>> 2c06b6250708a55a921fa4bd47bbd936d01314fd
     </header>
    <div class="container text-center">
   <div class="row align-items-start">
@@ -54,10 +19,4 @@ include "inc-head.php";  ?>
   </div>
 </div>
 
-<<<<<<< HEAD
 <?php include "inc-footer.php"; ?>
-=======
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
-</html>
->>>>>>> 2c06b6250708a55a921fa4bd47bbd936d01314fd
