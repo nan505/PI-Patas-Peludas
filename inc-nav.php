@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <a class="navbar-brand fs-2 titulo d-flex align-items-center pt-2 me-4" href="#">
             <img src="./img/logo-patas-peludas.jpg" width="52px" class="d-inline-block me-3 ms-4 img-logo-ong">
-            Patas Peludas
+            Patinhas Peludas
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -14,10 +14,10 @@
                     <a class="nav-link active fs-4 texto" aria-current="page" href="#">Início</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fs-4 texto" href="./sobre.html">Sobre</a>
+                    <a class="nav-link fs-4 texto" href="#sobre">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fs-4 texto" href="./galeria.html">Galeria</a>
+                    <a class="nav-link fs-4 texto" href="#galeria">Galeria</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fs-4 texto" href="./contato.html">Contato</a>

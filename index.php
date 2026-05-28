@@ -46,7 +46,7 @@ include "inc-head.php";
     <div class="container text-center">
   <div class="row align-items-start">
     <div class="col">
-      <h1 class="mt-5">Um pouco sobre nós:</h1>
+      <h1 id='sobre' class="mt-5 ancoras">Um pouco sobre nós:</h1>
       <p class="texto-sobre">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam iusto fuga tenetur asperiores reiciendis magni? Dicta dolores a hic temporibus commodi expedita aperiam nisi. Repudiandae necessitatibus similique iusto fugiat dolorem?</p>  
     </div>
     <div class="col mt-5">
@@ -65,7 +65,7 @@ include "inc-head.php";
         <main class="mt-4">
             <div class="row">
                 <div class="col-12">
-                    <h3 class="titulo">Fotos da nossa ONG:</h3>
+                    <h3 id="galeria" class="titulo ancoras">Fotos da nossa ONG:</h3>
                 </div>
             </div>
 
