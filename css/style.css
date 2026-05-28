@@ -59,4 +59,8 @@
 .flip-card-back {
     transform: rotateY(180deg);
 }
+
+.ancoras{
+    scroll-margin-top: 100px;
+}
 /* mi bombo */

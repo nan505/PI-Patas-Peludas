@@ -16,7 +16,7 @@ include "inc-head.php";
                 <div class="col-6">
                     <form action="animais-salvar.php" method="post">
                         <label>Nome do animal:</label><br>
-                        <input type="text" name="nome" required><br>
+                        <input type="text" name="nome" pattern="^[ 0-9a-zA-Z\u00C0-\u00FF\b]+$" required><br>
 
                         <br>
 
@@ -35,7 +35,7 @@ include "inc-head.php";
 
                         <div id="campo_doenca" style="display: none">
                             <label>Informe a(s) doença(s) do animal:</label><br>
-                            <input type="text" name="possui_doenca">
+                            <input type="text" name="possui_doenca" pattern="^[ 0-9a-zA-Z\u00C0-\u00FF\b]+$">
                         </div>
 
                         <br>
@@ -49,7 +49,7 @@ include "inc-head.php";
                         <br>
 
                         <label>Informe a idade do animal:</label><br>
-                        <input type="number" name="idade" required><br>
+                        <input type="number" name="idade" min="0" max="40" pattern="0-9" required><br>
 
                         <br>
 
@@ -62,6 +62,59 @@ include "inc-head.php";
                         <button type="reset">Limpar</button>
 
                     </form>
+                </div>
+
+                <div class="col-6">
+                    <table class="table table-striped table-hover border">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Idade</th>
+                                <th>Foi vermifugado?</th>
+                                <th>Possui doença?</th>
+                                <th>Castrado?</th>
+                            </tr>
+                        </thead>
+                        <?php
+                        
+                        include "inc-conexao.php";
+                        $sql = "SELECT * FROM tb_informacoes_gatos";
+                        $resultado = mysqli_query($conn, $sql);
+
+                        while($linha_resultado = mysqli_fetch_assoc($resultado) ){
+                            echo '<tr>';
+
+                            echo "<td> {$linha_resultado['id']} </td>";
+                            echo "<td> {$linha_resultado['nome']} </td>";
+                            echo "<td> {$linha_resultado['idade']} anos </td>";
+
+                            if($linha_resultado['vermifugado'] == 1){
+                                echo "<td> Sim </td>";
+                            }
+                            else{
+                                echo "<td> Não </td>";
+                            }
+
+                            if(!empty($linha_resultado['possui_doenca']) ){
+                                echo "<td> {$linha_resultado['possui_doenca']} </td>";
+                            }
+                            else{
+                                echo "<td> Não </td>";
+                            }
+
+                            if($linha_resultado['castrado'] == 1){
+                                echo "<td> Sim </td>";
+                            }
+                            else{
+                                echo "<td> Não </td>";
+                            }
+
+                            echo '</tr>';
+                        }
+
+                        ?>
+                    </table>
                 </div>
 
             <div>
