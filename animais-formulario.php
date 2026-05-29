@@ -7,7 +7,7 @@ include "inc-head.php";
 
 <body class="bg-light pt-5">
     <header class="mb-5">
-        <?php include "inc-nav.php"; ?>
+        <?php include "inc-nav-admin.php"; ?>
     </header>
 
         <section class="container">
@@ -119,6 +119,22 @@ include "inc-head.php";
 
             </div>
         </section>
+
+        <?php
+        
+        if(isset($_GET['mensagem'] ) && $_GET['mensagem'] == "sucesso"){
+            echo "
+            <script>
+
+            window.addEventListener('load', (event) => {
+                alert('O animal foi cadastrado com sucesso!');
+            });
+
+            </script>
+            ";
+        }
+        
+        ?>
 
         <script src="./js/animais-formulario.js"></script>
 
