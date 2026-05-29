@@ -2,7 +2,13 @@
 $titulo_pagina = "Patinhas Peludas: Formulário de Adotantes";
 include "inc-head.php";
 ?>
-<body>
+<body class="container">
+   <header class="mb-5">
+   <?php include "inc-nav.php" ?>
+   </header>
+
+   <section>
+
    <form action="adotantes-salvar.php" method="post">
     <label>Nome:</label><br>
     <input type="text" name="nomeadotante" required><br>
@@ -21,6 +27,6 @@ include "inc-head.php";
     <button type="submit">Cadastrar</button>
     <button type="reset">Limpar</button>
    </form> 
-</body>
+</section>
 
 <?php include "inc-footer.php"; ?>
