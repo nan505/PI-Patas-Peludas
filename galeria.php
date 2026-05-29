@@ -21,7 +21,7 @@ include "inc-head.php";
         ?> 
             <!-- card 2 -->
             <?php
-             $nomeGato = "Rycharlison"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "NeneRycharlison.jpg";
+             $nomeGato = "Rycharlison"; $infoFrent = "Querido muito fofo"; $infoTras = "..."; $fotoCat = "NeneRycharlison.jpg";
              include "inc-card.php";
             ?>
 
@@ -60,7 +60,7 @@ include "inc-head.php";
 
             <!-- card 4 -->
              <?php
-             $nomeGato = "Calango"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "calango.jpg";
+             $nomeGato = "Calango"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "calangoo.jpg";
              include "inc-card.php";
             ?>
         </div>
