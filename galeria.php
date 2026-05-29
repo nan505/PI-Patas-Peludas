@@ -54,13 +54,13 @@ include "inc-head.php";
             ?>
             <!-- card 3  -->
              <?php
-             $nomeGato = "Jorja"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "jorja.jpg";
+             $nomeGato = "Jorge"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "jorja.jpg";
              include "inc-card.php";
             ?>
 
             <!-- card 4 -->
              <?php
-             $nomeGato = "Calango"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "calangoo.jpg";
+             $nomeGato = "Calango"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "calango.jpg";
              include "inc-card.php";
             ?>
         </div>

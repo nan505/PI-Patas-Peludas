@@ -33,6 +33,43 @@ include "inc-head.php";
    </form>
      </div>
     </div>
+
+    <div class="col-md-12 col-lg-8">
+      <table class="table table-striped table-hover border">
+         <thead>
+            <tr>
+               <th>ID</th>
+               <th>Nome</th>
+               <th>CPF</th>
+               <th>Telefone</th>
+               <th>Nome do animal</th>
+               <th>CEP</th>
+               <th>Número da residência</th>
+               <th>Complemento</th>
+            </tr>
+         </thead>
+         <?php
+         include "inc-conexao.php";
+         $sql = "SELECT * FROM tb_adotantes";
+         $resultado = mysqli_query($conn, $sql);
+
+         while($linha_resultado = mysqli_fetch_assoc ($resultado))
+         {
+            echo '<tr>';
+
+            echo "<td> {$linha_resultado['id']} </td>";
+            echo "<td> {$linha_resultado['nome_adotante']} </td>";
+            echo "<td> {$linha_resultado['cpf']} </td>";
+            echo "<td> {$linha_resultado['telefone']} </td>";
+            echo "<td> {$linha_resultado['animal_adotado']} </td>";
+            echo "<td> {$linha_resultado['cep']} </td>";
+            echo "<td> {$linha_resultado['numero_residencia']} </td>";
+            echo "<td> {$linha_resultado['complemento']} </td>";
+         }
+         ?>
+      </table>
+    </div>
+
 </section>
 
 <?php include "inc-footer.php"; ?>
