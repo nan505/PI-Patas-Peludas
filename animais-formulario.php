@@ -71,7 +71,7 @@ include "inc-head.php";
                                 <th>ID</th>
                                 <th>Nome</th>
                                 <th>Idade</th>
-                                <th>Foi vermifugado?</th>
+                                <th>Vermifugado?</th>
                                 <th>Possui doença?</th>
                                 <th>Castrado?</th>
                             </tr>
@@ -117,7 +117,7 @@ include "inc-head.php";
                     </table>
                 </div>
 
-            <div>
+            </div>
         </section>
 
         <script src="./js/animais-formulario.js"></script>
