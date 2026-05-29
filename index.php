@@ -78,7 +78,7 @@ include "inc-head.php";
                 </div>
             </div>
 
-            <a href="./galeria.html" class="btn btn-primary fs-4 mt-2 texto">Galeria de Fotos</a>
+            <a href="./galeria.php" class="btn btn-primary fs-4 mt-2 texto">Galeria de Fotos</a>
 
         </main>
     </section>

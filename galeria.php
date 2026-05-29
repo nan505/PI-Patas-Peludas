@@ -27,7 +27,7 @@ include "inc-head.php";
 
             <!-- card 3 -->
              <?php
-             $nomeGato = "Irma Xena"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "irma-xena.jpg";
+             $nomeGato = "Alecrim"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "alecrim.jpg";
              include "inc-card.php";
             ?>
             
@@ -43,24 +43,24 @@ include "inc-head.php";
         <div class="row row-cols-4 g-4">
             <!-- card 1 --> 
             <?php
-             $nomeGato = "Bitelinho"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "cat-peso.jpg";
+             $nomeGato = "Sardinha"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "sardinha.jpg";
              include "inc-card.php";
             ?>
             
             <!-- card 2 -->
              <?php
-             $nomeGato = "Gato de Schrodinger"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "cat-schrodinger.jpg";
+             $nomeGato = "Jurubeba"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "jurubeba.jpg";
              include "inc-card.php";
             ?>
             <!-- card 3  -->
              <?php
-             $nomeGato = "Spider-Cat"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "cat-invert.jpg";
+             $nomeGato = "Jorja"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "jorja.jpg";
              include "inc-card.php";
             ?>
 
             <!-- card 4 -->
              <?php
-             $nomeGato = "Soldado Hyan"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "gatoguerra.jpg";
+             $nomeGato = "Calango"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "calango.jpg";
              include "inc-card.php";
             ?>
         </div>
