@@ -13,8 +13,8 @@ include "inc-head.php";
         <section class="container">
             <div class=row>
 
-                <div class="col-6">
-                    <form action="animais-salvar.php" method="post">
+                <div class="col-md-12 col-lg-4">
+                    <form action="animais-salvar.php" method="post" class="border border-4 p-4">
                         <label>Nome do animal:</label><br>
                         <input type="text" name="nome" pattern="^[ 0-9a-zA-Z\u00C0-\u00FF\b]+$" required><br>
 
@@ -64,7 +64,7 @@ include "inc-head.php";
                     </form>
                 </div>
 
-                <div class="col-6">
+                <div class="col-md-12 col-lg-8">
                     <table class="table table-striped table-hover border">
                         <thead>
                             <tr>
