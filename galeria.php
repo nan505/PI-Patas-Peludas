@@ -60,7 +60,7 @@ include "inc-head.php";
 
             <!-- card 4 -->
              <?php
-             $nomeGato = "Calango"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "calangoo.jpg";
+             $nomeGato = "Calango"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "calango.jpg";
              include "inc-card.php";
             ?>
         </div>
