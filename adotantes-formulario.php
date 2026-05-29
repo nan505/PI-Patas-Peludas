@@ -4,7 +4,7 @@ include "inc-head.php";
 ?>
 <body class="container">
    <header class="mb-5">
-   <?php include "inc-nav.php" ?>
+   <?php include "inc-nav-admin.php" ?>
    </header>
 
    <section>
