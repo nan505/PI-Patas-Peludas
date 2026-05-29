@@ -7,7 +7,7 @@ include "inc-head.php";
 
 <body class="bg-light pt-5">
     <header class="mb-5">
-        <?php include "inc-nav.php"; ?>
+        <?php include "inc-nav-admin.php"; ?>
     </header>
 
         <section class="container">
@@ -15,6 +15,12 @@ include "inc-head.php";
 
                 <div class="col-md-12 col-lg-4">
                     <form action="animais-salvar.php" method="post" class="border border-4 p-4">
+                        <div class="text-center">
+                            <h3>Cadastro de animais:</h3>
+                        </div>
+
+                        <hr>
+
                         <label>Nome do animal:</label><br>
                         <input type="text" name="nome" pattern="^[ 0-9a-zA-Z\u00C0-\u00FF\b]+$" required><br>
 
@@ -53,8 +59,8 @@ include "inc-head.php";
 
                         <br>
 
-                        <label>Imagem do animal: (Ainda não sabemos se será necessário)</label><br>
-                        <input type="text" name="url_imagem"><br>
+                        <label>Imagem do animal:</label><br>
+                        <input type="text" name="url_imagem" required><br>
 
                         <br>
 
@@ -119,6 +125,22 @@ include "inc-head.php";
 
             </div>
         </section>
+
+        <?php
+        
+        if(isset($_GET['mensagem'] ) && $_GET['mensagem'] == "sucesso"){
+            echo "
+            <script>
+
+            window.addEventListener('load', (event) => {
+                alert('O animal foi cadastrado com sucesso!');
+            });
+
+            </script>
+            ";
+        }
+        
+        ?>
 
         <script src="./js/animais-formulario.js"></script>
 
