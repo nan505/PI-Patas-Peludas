@@ -66,6 +66,8 @@ include "inc-head.php";
             echo "<td> {$linha_resultado['numero_residencia']} </td>";
             echo "<td> {$linha_resultado['complemento']} </td>";
          }
+
+         mysqli_close($conn);
          ?>
       </table>
     </div>

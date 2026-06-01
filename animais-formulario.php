@@ -119,6 +119,8 @@ include "inc-head.php";
                             echo '</tr>';
                         }
 
+                        mysqli_close($conn);
+
                         ?>
                     </table>
                 </div>
