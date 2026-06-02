@@ -33,7 +33,7 @@ include "inc-head.php";
             
             <!-- card 4 -->
             <?php
-             $nomeGato = "Mine-Rycharlison"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "Rycharlison.jpg";
+             $nomeGato = "Menine-Rycharlison"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "Rycharlison.jpg";
              include "inc-card.php";
             ?>
         </div>
