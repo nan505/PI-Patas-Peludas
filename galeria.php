@@ -67,7 +67,31 @@ include "inc-head.php";
         </div>
     </main>
 <!-- cards linha3 -->
+<main>
+        <div class="row row-cols-4 g-4">
+            <!-- card 1 -->
+            <?php
+             $nomeGato = "..."; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "....jpg";
+             include "inc-card.php";
+            ?>
+            
+            <!-- card 2 -->
+             <?php
+             $nomeGato = "..."; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "....jpg";
+             include "inc-card.php";
+            ?>
+            <!-- card 3 -->
+             <?php
+             $nomeGato = "..."; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "....jpg";
+             include "inc-card.php";
+            ?>
 
+            <!-- card 4 -->
+             <?php
+             $nomeGato = "."; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "....jpg";
+             include "inc-card.php";
+            ?>
+        </div>
 
     <script>
         document.querySelectorAll('.flip-card').forEach((card) => {
