@@ -16,24 +16,25 @@ include "inc-head.php";
          <div class="row row-cols-4 g-4">
         <!-- card 1 -->
         <?php 
-        $nomeGato = "Romeu"; $infoFrent = "Gatão branco de olhos azuis"; $infoTras = "Raça: Gatoxinha Função: Gordo"; $fotoCat = "Romeuu.jpg";
+        $nomeGato = "Romeu"; $infoFrent = "Gatão branco de olhos azuis"; $infoTras = "Raça: Gatoxinha Personalidade: Cínico e bocó "; $fotoCat = "Romeuu.jpg";
         include "inc-card.php";
+      
         ?> 
             <!-- card 2 -->
             <?php
-             $nomeGato = "Rycharlison"; $infoFrent = "Querido muito fofo"; $infoTras = "..."; $fotoCat = "NeneRycharlison.jpg";
+             $nomeGato = "Rycharlison"; $infoFrent = "Querido muito fofo"; $infoTras = "Raça: Coitado Personalidade: Meio masoquista, gosta de tapinhas no bumbum"; $fotoCat = "NeneRycharlison.jpg";
              include "inc-card.php";
             ?>
 
             <!-- card 3 -->
              <?php
-             $nomeGato = "Alecrim"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "alecrim.jpg";
+             $nomeGato = "Alecrim"; $infoFrent = "Timido e silencioso"; $infoTras = "Incrivelmente oculto e passa a maior parte do tempo dormindo "; $fotoCat = "alecrim.jpg";
              include "inc-card.php";
             ?>
             
             <!-- card 4 -->
             <?php
-             $nomeGato = "Menine-Rycharlison"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "Rycharlison.jpg";
+             $nomeGato = "Mini-Rycharlison"; $infoFrent = "Grande e gordo"; $infoTras = "Criatura colossal, pesquisadores acreditam que logo irá se criar um satélite natural em volta."; $fotoCat = "Rycharlison.jpg";
              include "inc-card.php";
             ?>
         </div>
