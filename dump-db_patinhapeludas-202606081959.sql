@@ -63,7 +63,7 @@ CREATE TABLE `tb_informacoes_gatos` (
   `foto` varchar(1000) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +72,7 @@ CREATE TABLE `tb_informacoes_gatos` (
 
 LOCK TABLES `tb_informacoes_gatos` WRITE;
 /*!40000 ALTER TABLE `tb_informacoes_gatos` DISABLE KEYS */;
-INSERT INTO `tb_informacoes_gatos` VALUES (1,'Rycharlison',1,'',1,2,''),(2,'Amora',0,'',1,10,'');
+INSERT INTO `tb_informacoes_gatos` VALUES (1,'Rycharlison',1,'',1,2,'./img/NeneRycharlison.jpg'),(2,'Amora',0,'',1,10,'./img/amora.jpg'),(4,'Perubinha',1,'',1,2,'./img/Perubinha.jpg'),(5,'Torresmo',1,'',1,2,'./img/Torresmo.jpg'),(6,'Jorge',1,'Problema pulmonar',1,7,'./img/jorja.jpg'),(7,'Alecrim',1,'',1,1,'./img/alecrim.jpg'),(8,'Calango',1,'',1,1,'./img/calango.jpg'),(9,'Jurubeba',1,'',1,2,'./img/jurubeba.jpg'),(10,'Mexirica',1,'',1,6,'./img/Mexirica.jpg'),(11,'Sheila',1,'',1,1,'./img/My_sheila.jpg'),(12,'Mini Rycharlison',1,'',1,1,'./img/Rycharlison.jpg'),(13,'Sardinha',1,'',1,1,'./img/sardinha.jpg'),(14,'Romeu',1,'',1,2,'./img/Romeuu.jpg');
 /*!40000 ALTER TABLE `tb_informacoes_gatos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -89,4 +89,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-05-28 21:29:33
+-- Dump completed on 2026-06-08 19:59:21
