@@ -66,8 +66,9 @@ include "inc-head.php";
             ?>
         </div>
     </main>
-<!-- cards linha3 -->
-<main class="container my-4">
+
+<!-- linha 3 -->
+ <main class="container my-4">
         <div class="row row-cols-4 g-4">
             <!-- card 1 -->
             <?php
@@ -93,50 +94,8 @@ include "inc-head.php";
             ?>
         </div>
 </main>
-<!-- cards linha4 -->
-<main class="container my-4">
-        <div class="row row-cols-4 g-4">
-            <!-- card 1 -->
-            <?php
-             $nomeGato = "..."; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "";
-             include "inc-card.php";
-            ?>
-            
-            <!-- card 2 -->
-             <?php
-             $nomeGato = "Mexirica"; $infoFrent = "Grandiosa e imponente"; $infoTras = "Chamam ela também de princesa acho que deve ser ar de imponência"; $fotoCat = "Mexirica.jpg";
-             include "inc-card.php";
-            ?>
-            <!-- card 3 -->
-             <?php
-             $nomeGato = "Torresmo"; $infoFrent = "Observadora"; $infoTras = "Não sabe o significado de privacidade e espaço pessoal, seu lugar favorito é o banheiro."; $fotoCat = "Torresmo.jpg";
-             include "inc-card.php";
-            ?>
 
-           <!-- card 4 -->
-             <?php
-             $nomeGato = "Peroba"; $infoFrent = "Falante e Educada"; $infoTras = "Incrivelmente falante e companheira, infelizmente gosta de dormir em cima do teclado durante periodos de uso."; $fotoCat = "Perubinha.jpg";
-             include "inc-card.php";
-            ?>
-        </div>
-</main> 
-<!-- linha5 -->
-  <!-- cards linha1 -->
-    <main class="container my-4">
-         <div class="row row-cols-4 g-4">
-        <!-- card 1 -->
-        <?php 
-        $nomeGato = "Romeu"; $infoFrent = "Gatão branco de olhos azuis"; $infoTras = "Se faz de sonso quando causa problemas."; $fotoCat = "Romeuu.jpg";
-        include "inc-card.php";
-      
-        ?> 
-            <!-- card 2 -->
-            <?php
-             $nomeGato = "Rycharlison"; $infoFrent = "Querido muito fofo"; $infoTras = "Meio masoquista, gosta de tapinhas no bumbum."; $fotoCat = "NeneRycharlison.jpg";
-             include "inc-card.php";
-            ?>
-        </div>
-</main>
+<!-- o que faz o treco gira -->
     <script>
         document.querySelectorAll('.flip-card').forEach((card) => {
             card.addEventListener('click', () => {
@@ -144,4 +103,5 @@ include "inc-head.php";
             });
         });
     </script>
+<!-- bah -->
 <?php include "inc-footer.php"; ?>
