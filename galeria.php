@@ -66,34 +66,8 @@ include "inc-head.php";
             ?>
         </div>
     </main>
-<!-- cards linha3 -->
-<main class="container my-4">
-        <div class="row row-cols-4 g-4">
-            <!-- card 1 -->
-            <?php
-             $nomeGato = "Jurubeba"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "Jurubeba.jpg";
-             include "inc-card.php";
-            ?>
-            
-            <!-- card 2 -->
-             <?php
-             $nomeGato = "Mexirica"; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "Mexirica.jpg";
-             include "inc-card.php";
-            ?>
-            <!-- card 3 -->
-             <?php
-             $nomeGato = "..."; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "....jpg";
-             include "inc-card.php";
-            ?>
 
-            <!-- card 4 -->
-             <?php
-             $nomeGato = "."; $infoFrent = "..."; $infoTras = "..."; $fotoCat = "....jpg";
-             include "inc-card.php";
-            ?>
-        </div>
-</main>
-<!-- linha 4 -->
+<!-- linha 3 -->
  <main class="container my-4">
         <div class="row row-cols-4 g-4">
             <!-- card 1 -->
@@ -120,7 +94,8 @@ include "inc-head.php";
             ?>
         </div>
 </main>
-<!-- linha 5 -->
+
+<!-- o que faz o treco gira -->
     <script>
         document.querySelectorAll('.flip-card').forEach((card) => {
             card.addEventListener('click', () => {
@@ -128,4 +103,5 @@ include "inc-head.php";
             });
         });
     </script>
+<!-- bah -->
 <?php include "inc-footer.php"; ?>
