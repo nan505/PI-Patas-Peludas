@@ -74,4 +74,8 @@ include "inc-head.php";
 
 </section>
 
+<<<<<<< HEAD
 <?php include "inc-footer.php"; ?>
+=======
+<?php include "inc-footer-admin.php"; ?>
+>>>>>>> 443c6f6795356a1fa20011c2f884a00800188fb7
