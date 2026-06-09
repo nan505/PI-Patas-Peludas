@@ -9,3 +9,7 @@ function fnMostrarTBoxDoenca(){
         campo_doenca.style.display = "none"
     }
 }
+
+function fnLimparURL(){
+    window.location.href = window.location.pathname
+}
