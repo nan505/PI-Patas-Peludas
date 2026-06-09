@@ -71,6 +71,52 @@ include "inc-head.php";
                 </div>
 
                 <div class="col-md-12 col-lg-8">
+
+                    <section>
+                        <h3>Filtros: </h3>
+                        <?php
+
+                        include "inc-conexao.php";
+                        $sql = "SELECT * FROM tb_informacoes_gatos WHERE 1 = 1";
+                        $params = [];
+
+                        $vermifugado = $_GET['vermifugado'] ?? null;
+                        if(isset($vermifugado) && $vermifugado != ""){
+                            $sqlVermifugado = " AND vermifugado = ?";
+
+                            $sql .= $sqlVermifugado;
+                            $params[] = $vermifugado;
+                        }
+
+                        $castrado = $_GET['castrado'] ?? null;
+                        if(isset($castrado) && $castrado != ""){
+                            $sqlCastrado = " AND castrado = ?";
+
+                            $sql .= $sqlCastrado;
+                            $params[] = $vermifugado;
+                        }
+
+                        ?>
+                        <form method="GET" action="">
+                        
+                            <label>Vermifugado:</label>
+                            <select name="vermifugado">
+                                <option selected></option>
+                                <option value="1">Sim</option>
+                                <option value="0">Não</option>
+                            </select>
+
+                            <label>Castrado:</label>
+                            <select>
+                                <option selected></option>
+                                <option value="1">Sim</option>
+                                <option value="2">Não</option>
+                            </select>
+
+                            <button type="submit">Filtrar</button>
+                        </form>
+                    </section>
+
                     <table class="table table-striped table-hover border">
                         <thead>
                             <tr>
@@ -83,10 +129,7 @@ include "inc-head.php";
                             </tr>
                         </thead>
                         <?php
-                        
-                        include "inc-conexao.php";
-                        $sql = "SELECT * FROM tb_informacoes_gatos";
-                        $resultado = mysqli_query($conn, $sql);
+                        $resultado = mysqli_execute_query($conn, $sql, $params);
 
                         while($linha_resultado = mysqli_fetch_assoc($resultado) ){
                             echo '<tr>';
@@ -146,4 +189,4 @@ include "inc-head.php";
 
         <script src="./js/animais-formulario.js"></script>
 
-<?php include "inc-footer.php"; ?>
+<?php include "inc-footer-admin.php"; ?>

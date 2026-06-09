@@ -25,4 +25,4 @@ include "inc-head.php";
         </form>
     </section>
 
-<?php include "inc-footer.php"; ?>
+<?php include "inc-footer-admin.php"; ?>
