@@ -80,40 +80,52 @@ include "inc-head.php";
                         $sql = "SELECT * FROM tb_informacoes_gatos WHERE 1 = 1";
                         $params = [];
 
-                        $vermifugado = $_GET['vermifugado'] ?? null;
-                        if(isset($vermifugado) && $vermifugado != ""){
+                        $getNome = $_GET['filtro_nome'] ?? null;
+                        if(isset($getNome) && $getNome != ""){
+                            $sqlNome = " AND nome = ?";
+
+                            $sql .= $sqlNome;
+                            $params[] = $getNome;
+                        }
+
+                        $getVermifugado = $_GET['filtro_vermifugado'] ?? null;
+                        if(isset($getVermifugado) && $getVermifugado != ""){
                             $sqlVermifugado = " AND vermifugado = ?";
 
                             $sql .= $sqlVermifugado;
-                            $params[] = $vermifugado;
+                            $params[] = $getVermifugado;
                         }
 
-                        $castrado = $_GET['castrado'] ?? null;
-                        if(isset($castrado) && $castrado != ""){
+                        $getCastrado = $_GET['filtro_castrado'] ?? null;
+                        if(isset($getCastrado) && $getCastrado != ""){
                             $sqlCastrado = " AND castrado = ?";
 
                             $sql .= $sqlCastrado;
-                            $params[] = $vermifugado;
+                            $params[] = $getCastrado;
                         }
 
                         ?>
                         <form method="GET" action="">
+
+                            <label>Nome:</label>
+                            <input type="text" <?php if(isset($getNome) && $getNome != ""){echo "value = '$getNome'";} ?> name="filtro_nome">
                         
                             <label>Vermifugado:</label>
-                            <select name="vermifugado">
-                                <option selected></option>
-                                <option value="1">Sim</option>
-                                <option value="0">Não</option>
+                            <select name="filtro_vermifugado">
+                                <option></option>
+                                <option value="1" <?php if(isset($getVermifugado) && $getVermifugado == 1){echo "selected";} ?>>Sim</option>
+                                <option value="0" <?php if(isset($getVermifugado) && $getVermifugado == 0){echo "selected";} ?>>Não</option>
                             </select>
 
                             <label>Castrado:</label>
-                            <select>
-                                <option selected></option>
-                                <option value="1">Sim</option>
-                                <option value="2">Não</option>
+                            <select name="filtro_castrado">
+                                <option></option>
+                                <option value="1" <?php if(isset($getCastrado) && $getCastrado == 1){echo "selected";} ?>>Sim</option>
+                                <option value="0" <?php if(isset($getCastrado) && $getCastrado == 0){echo "selected";} ?>>Não</option>
                             </select>
 
                             <button type="submit">Filtrar</button>
+                            <button type="reset">Limpar filtros</button>
                         </form>
                     </section>
 
