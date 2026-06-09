@@ -8,32 +8,38 @@ include "inc-head.php";
     <header class="mb-5">
         <?php include "inc-nav.php"; ?>
     </header>
-<!-- 
-     `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(150) NOT NULL,
-  `vermifugado` tinyint(1) NOT NULL,
-  `possui_doenca` varchar(50) DEFAULT NULL,
-  `castrado` tinyint(1) NOT NULL,
-  `idade` int(2) NOT NULL,
-  `foto` varchar(1000) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci; -->
-
-
 <?php
     include "inc-conexao.php";
-    $sql = "SELECT * FROM tb_informacoes_gatos";
-    $resultado = mysqli_query($conexao, $sql);
-    while ($linha = mysqli_fetch_assoc($resultado)) {
-        include "inc-card.php";
-        $nomeGato = $linha['nome'];
-        $infoFrent = $linha['idade'];
-        $infoTras = $linha['possui_doenca'] . ', ' . $linha['vermifugado'] . ', ' . $linha['castrado'];
-        $fotoCat = $linha['foto'];
-    }
+    $sql = "SELECT nome, vermifugado, possui_doenca, castrado, idade, foto FROM tb_informacoes_gatos";
+    $resultado = mysqli_query($conn, $sql);
 ?>
 
+<br><br><br>
+
+<main class="container mb-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <?php
+        if ($resultado) {
+            while ($linha = mysqli_fetch_assoc($resultado)) {
+                $nomeGato = htmlspecialchars($linha['nome'], ENT_QUOTES, 'UTF-8');
+                $infoFrent = (int) $linha['idade'] . ' anos';
+                $doenca = !empty($linha['possui_doenca']) ? htmlspecialchars($linha['possui_doenca'], ENT_QUOTES, 'UTF-8') : 'Nao possui doenca informada';
+                $vermifugado = $linha['vermifugado'] == 1 ? 'Sim' : 'Nao';
+                $castrado = $linha['castrado'] == 1 ? 'Sim' : 'Nao';
+                $infoTras = "Vermifugado: {$vermifugado}<br>Doenca: {$doenca}<br>Castrado: {$castrado}";
+                $fotoCat = htmlspecialchars($linha['foto'], ENT_QUOTES, 'UTF-8');
+
+                include "inc-card.php";
+            }
+        }
+        else {
+            echo '<p class="text-danger">Nao foi possivel carregar as informacoes dos gatos.</p>';
+        }
+
+        mysqli_close($conn);
+        ?>
+    </div>
+</main>
 
 <!-- o que faz o treco gira -->
     <script>
@@ -43,5 +49,4 @@ include "inc-head.php";
             });
         });
     </script>
-<!-- bah -->
 <?php include "inc-footer.php"; ?>

@@ -32,8 +32,6 @@ include "inc-head.php";
    </div>
    </form>
      </div>
-    </div>
-
     <div class="col-md-12 col-lg-8">
       <table class="table table-striped table-hover border">
          <thead>
@@ -65,11 +63,13 @@ include "inc-head.php";
             echo "<td> {$linha_resultado['cep']} </td>";
             echo "<td> {$linha_resultado['numero_residencia']} </td>";
             echo "<td> {$linha_resultado['complemento']} </td>";
+            echo '</tr>';
          }
 
          mysqli_close($conn);
          ?>
       </table>
+    </div>
     </div>
 
 </section>
