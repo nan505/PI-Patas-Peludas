@@ -80,40 +80,111 @@ include "inc-head.php";
                         $sql = "SELECT * FROM tb_informacoes_gatos WHERE 1 = 1";
                         $params = [];
 
-                        $vermifugado = $_GET['vermifugado'] ?? null;
-                        if(isset($vermifugado) && $vermifugado != ""){
+                        $getNome = $_GET['filtro_nome'] ?? null;
+                        if(isset($getNome) && $getNome != ""){
+                            $getNomeTratado = trim(ucfirst(strtolower($getNome)));
+                            $sqlNome = " AND nome = ?";
+
+                            $sql .= $sqlNome;
+                            $params[] = $getNome;
+                        }
+
+                        $getIdadeMinima = $_GET['filtro_idade_minima'] ?? null;
+                        if(isset($getIdadeMinima) && $getIdadeMinima >= 0){
+                            $sqlIdadeMinima = " AND idade >= ?";
+
+                            $sql .= $sqlIdadeMinima;
+                            $params[] = $getIdadeMinima;
+                        }
+
+                        $getIdadeMaxima = $_GET['filtro_idade_maxima'] ?? null;
+                        if(isset($getIdadeMaxima) && $getIdadeMaxima >= 0){
+
+                            if($getIdadeMinima == null || $getIdadeMaxima >= $getIdadeMinima){
+                                $isIdadeMaximaValida = true;
+                                $sqlIdadeMaxima = " AND idade <= ?";
+
+                                $sql .= $sqlIdadeMaxima;
+                                $params[] = $getIdadeMaxima;
+
+                            }
+                        }
+
+                        $getVermifugado = $_GET['filtro_vermifugado'] ?? null;
+                        if(isset($getVermifugado) && $getVermifugado != ""){
                             $sqlVermifugado = " AND vermifugado = ?";
 
                             $sql .= $sqlVermifugado;
-                            $params[] = $vermifugado;
+                            $params[] = $getVermifugado;
                         }
 
-                        $castrado = $_GET['castrado'] ?? null;
-                        if(isset($castrado) && $castrado != ""){
+                        $getDoenca = $_GET['filtro_doenca'] ?? null;
+                        if(isset($getDoenca) && ($getDoenca == 1 || $getDoenca == 0) ){
+                            if($getDoenca == 1){
+                                $sqlDoenca = " AND possui_doenca IS NOT NULL AND possui_doenca != ''";
+                            }
+                            else if($getDoenca == 0){
+                                $sqlDoenca = " AND possui_doenca IS NULL OR possui_doenca = ''";
+                            }
+                            $sql .= $sqlDoenca;
+                            $getDoencaValidada = $getDoenca;
+                        }
+
+                        $getCastrado = $_GET['filtro_castrado'] ?? null;
+                        if(isset($getCastrado) && $getCastrado != ""){
                             $sqlCastrado = " AND castrado = ?";
 
                             $sql .= $sqlCastrado;
-                            $params[] = $vermifugado;
+                            $params[] = $getCastrado;
                         }
 
                         ?>
                         <form method="GET" action="">
-                        
+
+                            <label>Nome:</label>
+                            <input type="text" name="filtro_nome" <?php if(isset($getNome) && $getNome != ""){echo "value = '$getNome'";} ?> >
+                            
+                            <br>
+
+                            <label>Idade mínima:</label>
+                            <input type="number" name="filtro_idade_minima" <?php if(isset($getIdadeMinima) && $getIdadeMinima >= 0){echo "value = '$getIdadeMinima'";} ?> >
+
+                            <br>
+
+                            <label>Idade máxima:</label>
+                            <input type="number" name="filtro_idade_maxima" <?php if(isset($getIdadeMaxima) && $isIdadeMaximaValida = true){echo "value = '$getIdadeMaxima'";} ?> >
+
+                            <br>
+
                             <label>Vermifugado:</label>
-                            <select name="vermifugado">
-                                <option selected></option>
-                                <option value="1">Sim</option>
-                                <option value="0">Não</option>
+                            <select name="filtro_vermifugado">
+                                <option></option>
+                                <option value="1" <?php if(isset($getVermifugado) && $getVermifugado == 1){echo "selected";} ?>>Sim</option>
+                                <option value="0" <?php if(isset($getVermifugado) && $getVermifugado == 0){echo "selected";} ?>>Não</option>
                             </select>
+
+                            <br>
+
+                            <label>Possui doença:</label>
+                            <select name="filtro_doenca">
+                                <option></option>
+                                <option value="1" <?php if(isset($getDoencaValidada) && $getDoencaValidada == 1){echo "selected";} ?> >Sim</option>
+                                <option value="0" <?php if(isset($getDoencaValidada) && $getDoencaValidada == 0){echo "selected";} ?> >Não</option>
+                            </select>
+
+                            <br>
 
                             <label>Castrado:</label>
-                            <select>
-                                <option selected></option>
-                                <option value="1">Sim</option>
-                                <option value="2">Não</option>
+                            <select name="filtro_castrado">
+                                <option></option>
+                                <option value="1" <?php if(isset($getCastrado) && $getCastrado == 1){echo "selected";} ?>>Sim</option>
+                                <option value="0" <?php if(isset($getCastrado) && $getCastrado == 0){echo "selected";} ?>>Não</option>
                             </select>
 
+                            <br>
+
                             <button type="submit">Filtrar</button>
+                            <button type="reset" onclick="fnLimparURL()">Limpar filtros</button>
                         </form>
                     </section>
 
@@ -186,7 +257,5 @@ include "inc-head.php";
         }
         
         ?>
-
-        <script src="./js/animais-formulario.js"></script>
 
 <?php include "inc-footer-admin.php"; ?>
