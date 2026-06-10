@@ -48,8 +48,21 @@ include "inc-head.php";
       $getNomeTratado = trim(ucfirst(strtolower($getNome)));
       $sqlNome = " AND nome_adotante = ?";
 
+
+
       $sql .= $sqlNome;
       $params[] = $getNome;
+      }
+
+      $getNomeAnimal = $_GET['filtro_nome_animal'] ?? null;
+      if(isset($getNomeAnimal) && $getNomeAnimal != ""){
+      $getNomeAnimalTratado = trim(ucfirst(strtolower($getNomeAnimal)));
+      $sqlNomeAnimal = " AND animal_adotado = ?";
+
+      
+
+      $sql .= $sqlNomeAnimal;
+      $params[] = $getNomeAnimal;
       }
       ?>
 
@@ -57,6 +70,8 @@ include "inc-head.php";
    <label>Nome: </label>
    <input type="text" name="filtro_nome">
    <br>
+   <label>Nome do animal:</label>
+   <input type="text" name="filtro_nome_animal">
    <button type="submit">Filtrar</button>
    <button type="reset" onclick="fnLimparURL()">Limpar Filtros</button>
 </form>
