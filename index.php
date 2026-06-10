@@ -5,7 +5,7 @@ include "inc-head.php";
 
 ?>
 
-<body class="pt-5 d-flex flex-column min-vh-100 body-index" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0" style="scroll-behavior: smooth" >
+<body id="body-index" class="pt-5 d-flex flex-column min-vh-100" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0" style="scroll-behavior: smooth" >
     <header>
         <?php include "inc-nav.php"; ?>
 

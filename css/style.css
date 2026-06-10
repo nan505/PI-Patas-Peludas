@@ -7,6 +7,12 @@
     background-color: #022B3A;
 }
 
+#body-index{
+    background-image: url(../img/calangoo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #BFDBF7;
+}
 
 .titulo{
     font-family: Martel;
