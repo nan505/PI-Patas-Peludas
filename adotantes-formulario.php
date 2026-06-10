@@ -33,6 +33,35 @@ include "inc-head.php";
    </form>
      </div>
     <div class="col-md-12 col-lg-8">
+       <section>
+       <h3>Filtros: </h3>
+
+      <?php
+      include "inc-conexao.php";
+
+      include "inc-conexao.php";
+      $sql = "SELECT * FROM tb_adotantes WHERE 1 = 1";
+      $params = [];
+      
+      $getNome = $_GET['filtro_nome'] ?? null;
+      if(isset($getNome) && $getNome != ""){
+      $getNomeTratado = trim(ucfirst(strtolower($getNome)));
+      $sqlNome = " AND nome_adotante = ?";
+
+      $sql .= $sqlNome;
+      $params[] = $getNome;
+      }
+      ?>
+
+<form action="" method="GET">
+   <label>Nome: </label>
+   <input type="text" name="filtro_nome">
+   <br>
+   <button type="submit">Filtrar</button>
+   <button type="reset" onclick="fnLimparURL()">Limpar Filtros</button>
+</form>
+
+      </section>
       <table class="table table-striped table-hover border">
          <thead>
             <tr>
@@ -47,9 +76,9 @@ include "inc-head.php";
             </tr>
          </thead>
          <?php
-         include "inc-conexao.php";
-         $sql = "SELECT * FROM tb_adotantes";
-         $resultado = mysqli_query($conn, $sql);
+         $resultado = mysqli_execute_query($conn, $sql, $params);
+
+         
 
          while($linha_resultado = mysqli_fetch_assoc ($resultado))
          {
@@ -74,8 +103,4 @@ include "inc-head.php";
 
 </section>
 
-<<<<<<< HEAD
-<?php include "inc-footer.php"; ?>
-=======
 <?php include "inc-footer-admin.php"; ?>
->>>>>>> 443c6f6795356a1fa20011c2f884a00800188fb7
