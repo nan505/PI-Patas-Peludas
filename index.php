@@ -5,9 +5,10 @@ include "inc-head.php";
 
 ?>
 
-<body class="bg-light pt-5">
+<body class="pt-5 d-flex flex-column min-vh-100 body-index" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0" style="scroll-behavior: smooth" >
     <header>
         <?php include "inc-nav.php"; ?>
+
 
 <!-- Carrossel feito por: Nan Santos -->
 <!-- Importante: Mudar o "src" e o "alt" das imagens assim que possível -->
@@ -54,6 +55,9 @@ include "inc-head.php";
     </div>  
   </div>
 </div>
+
+
+
 
 <!-- Seção de introdução e fotos feita por: Nan Santos -->
     <section class="container mt-4">
