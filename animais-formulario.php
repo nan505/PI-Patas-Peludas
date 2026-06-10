@@ -258,6 +258,4 @@ include "inc-head.php";
         
         ?>
 
-        <script src="./js/animais-formulario.js"></script>
-
 <?php include "inc-footer-admin.php"; ?>
