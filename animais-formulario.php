@@ -35,6 +35,7 @@ include "inc-head.php";
                             <label>Não</label>
                         </div>
 
+                        <!-- Importante: Não mudar os IDs "checkbox_doenca" e "input_doenca", ambos estão ligados à função "fnMostrarTBoxDoenca()" via JavaScript! -Nan -->
                         <label>O animal possui alguma doença?</label>
                         <div>
                             <input id="checkbox_doenca" type="checkbox" onchange="fnMostrarTBoxDoenca()">
@@ -69,11 +70,14 @@ include "inc-head.php";
 
                 <div class="col-md-12 col-lg-8">
 
+                    <!-- Os filtros funcionam com base na concatenação de novos comandos na variável "$sql", e validam se as variáveis "GET" foram atribuídas corretamente! -Nan -->
+                    <!-- O array "$params" armazena o valor das variáveis que serão utilizados no lugar dos pontos de interrogação quando o script SQL for executado! -Nan -->
                     <section class="page-section">
                         <h2 class="titulo fs-3">Filtros</h2>
                         <?php
 
                         include "inc-conexao.php";
+
                         $sql = "SELECT * FROM tb_informacoes_gatos WHERE 1 = 1";
                         $params = [];
                         $isIdadeMaximaValida = false;
@@ -137,6 +141,8 @@ include "inc-head.php";
                         }
 
                         ?>
+                        <!-- Os códigos PHP dentro dos "inputs" servem para validar se as variáveis "GET" dos filtros foram atribuídas corretamente,
+                        para que seus valores sejam exibidos ou selecionados nos campos correspondentes! -Nan -->
                         <form method="GET" action="" class="filter-form row g-3 align-items-end mb-4">
 
                             <div class="col-md-6">
@@ -199,6 +205,8 @@ include "inc-head.php";
                                 <th>Castrado?</th>
                             </tr>
                         </thead>
+
+                        <!-- O "mysqli_execute_query()" possui a função de executar o script SQL de forma segura, minimizando os riscos de possíveis scripts maliciosos! -Nan -->
                         <?php
                         $resultado = mysqli_execute_query($conn, $sql, $params);
 
