@@ -22,6 +22,9 @@ include "inc-head.php";
                         <label>Nome do animal:</label>
                         <input type="text" name="nome" pattern="^[ 0-9a-zA-Z\u00C0-\u00FF\b]+$" required>
 
+                        <label>Informe a idade do animal:</label>
+                        <input type="number" name="idade" min="0" max="40" pattern="0-9" required>
+
                         <label>O animal foi vermifugado?</label>
                         <div>
                             <input type="radio" name="foi_vermifugado" value="sim" required>
@@ -40,7 +43,7 @@ include "inc-head.php";
 
                         <div id="campo_doenca" style="display: none">
                             <label>Informe a(s) doença(s) do animal:</label>
-                            <input type="text" name="possui_doenca" pattern="^[ 0-9a-zA-Z\u00C0-\u00FF\b]+$">
+                            <input id="input_doenca" type="text" name="possui_doenca" pattern="^[ 0-9a-zA-Z\u00C0-\u00FF\b]+$">
                         </div>
 
                         <label>O animal é castrado?</label>
@@ -52,9 +55,6 @@ include "inc-head.php";
                             <input type="radio" name="foi_castrado" value="nao">
                             <label>Não</label>
                         </div>
-
-                        <label>Informe a idade do animal:</label>
-                        <input type="number" name="idade" min="0" max="40" pattern="0-9" required>
 
                         <label>Imagem do animal:</label>
                         <input type="text" name="url_imagem" required>
@@ -206,7 +206,7 @@ include "inc-head.php";
                             echo '<tr>';
 
                             echo "<td> {$linha_resultado['id']} </td>";
-                            echo "<td> {$linha_resultado['nome']} </td>";
+                            echo "<td> <a href='animais-editar.php?id={$linha_resultado['id']}'> {$linha_resultado['nome']} </a> </td>";
                             echo "<td> {$linha_resultado['idade']} anos </td>";
 
                             if($linha_resultado['vermifugado'] == 1){
