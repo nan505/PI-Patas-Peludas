@@ -75,10 +75,12 @@ include "inc-head.php";
 
             <div class="row">
                 <div class="col-6">
-                    <img class="object-fit-cover rounded img-galeria" src="./img/gatoguerra.jpg">
+                    <!-- tamanho 412x453 -->
+                    <img class="object-fit-cover rounded img-galeria" src="./img/calangoo.jpg" width="412" height="453">
                 </div>
                 <div class="col-6">
-                    <img class="object-fit-cover rounded img-galeria" src="./img/gatoguerra.jpg">
+                    <!-- tamanho 412x453 -->
+                    <img class="object-fit-cover rounded img-galeria" src="./img/irma-xena.jpg" width="412" height="453">
                 </div>
             </div>
 
@@ -101,7 +103,7 @@ include "inc-head.php";
                 <div class="card">
                     <div class="row">
                         <div class="col-4">
-                            <img src="./img/gatoguerra.jpg" class="img-fluid rounded" alt="...">
+                            <img src="./img/cat-dant.jpg" class="img-fluid rounded" alt="...">
                         </div>
                         <div class="col-8">
                             <h4>Card de review!</h4>
@@ -115,7 +117,7 @@ include "inc-head.php";
                 <div class="card">
                     <div class="row">
                         <div class="col-4">
-                            <img src="./img/gatoguerra.jpg" class="img-fluid rounded" alt="...">
+                            <img src="./img/cat-peso.jpg" class="img-fluid rounded" alt="...">
                         </div>
                         <div class="col-8">
                             <h4>Card de review!</h4>
@@ -129,7 +131,7 @@ include "inc-head.php";
                 <div class="card">
                     <div class="row">
                         <div class="col-4">
-                            <img src="./img/gatoguerra.jpg" class="img-fluid rounded" alt="...">
+                            <img src="./img/sat-cat.jpg" class="img-fluid rounded" alt="...">
                         </div>
                         <div class="col-8">
                             <h4>Card de review!</h4>

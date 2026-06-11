@@ -1,7 +1,7 @@
 <!-- Navbar feita por: Nan Santos -->
 <nav id="navbar-inicio" class="navbar fixed-top navbar-expand-md">
     <div class="container-fluid">
-        <a class="navbar-brand fs-2 titulo d-flex align-items-center pt-2 me-4" href="#">
+        <a class="navbar-brand fs-2 titulo d-flex align-items-center pt-2 me-4 logsombra" href="#">
             <img src="./img/logo-patas-peludas.jpg" width="52px" class="d-inline-block me-3 ms-4 img-logo-ong">
             Patinhas Peludas
         </a>

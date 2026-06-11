@@ -7,13 +7,6 @@
     background-color: #022B3A;
 }
 
-#body-index{
-    background-image: url(../img/calangoo.jpg);
-    background-size: cover;
-    background-position: center;
-    background-color: #BFDBF7;
-}
-
 .titulo{
     font-family: Martel;
     font-weight: bold;
@@ -43,6 +36,18 @@
     object-position: center;
     background-color: #f8f9fa;
     padding: 8px;
+}
+
+/* iori */
+#body-index{
+    background-color: #d6e1ec;
+    color: #003142;
+
+}
+
+.logsombra{
+        /* colocar sombra no texto */
+    text-shadow: 1px 1px 2px #724bb1;
 }
 
 /* inferno */
