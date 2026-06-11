@@ -4,8 +4,8 @@ $titulo_pagina = "ONG Patinhas Peludas";
 include "inc-head.php";
 
 ?>
-<body>
-    <header class="mb-5">
+<body class="site-body pt-5 d-flex flex-column min-vh-100">
+    <header>
         <?php include "inc-nav.php"; ?>
     </header>
 <?php
@@ -14,11 +14,11 @@ include "inc-head.php";
     $resultado = mysqli_query($conn, $sql);
 ?>
 
-<br><br><br>
-
-
-
-<main class="container mb-5">
+<main class="container page-main mb-5">
+    <div class="text-center mb-4">
+        <h1 class="titulo">Galeria de Fotos</h1>
+        <p class="texto fs-5">Conheça os gatos que estão recebendo cuidado e carinho na ONG.</p>
+    </div>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         <?php
         if ($resultado) {

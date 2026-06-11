@@ -1,5 +1,5 @@
 <!-- Rodapé feito por: Nan Santos -->
-    <footer id="rodape" class="mt-5">
+    <footer id="rodape" class="mt-auto pt-4 pb-3">
         <main class="container">
             <div class="row">
                 <div class="col-4">

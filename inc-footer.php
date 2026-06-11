@@ -1,5 +1,5 @@
 <!-- Rodapé feito por: Nan Santos -->
-    <footer id="rodape" class="mt-5">
+    <footer id="rodape" class="mt-auto pt-4 pb-3">
         <main class="container">
             <div class="row">
                 <div class="col-4">
@@ -9,10 +9,10 @@
                                 <a class="nav-link active fs-5 texto text-light p-0 w-auto" aria-current="page" href="./index.php">Início</a>
                             </li>
                             <li class="nav-item mb-1">
-                                <a class="nav-link fs-5 texto text-light p-0" href="#sobre">Sobre</a>
+                                <a class="nav-link fs-5 texto text-light p-0" href="./index.php#sobre">Sobre</a>
                             </li>
                             <li class="nav-item mb-1">
-                                <a class="nav-link fs-5 texto text-light p-0" href="#galeria">Galeria</a>
+                                <a class="nav-link fs-5 texto text-light p-0" href="./index.php#galeria">Galeria</a>
                             </li>
                             <li class="nav-item mb-1">
                                 <a class="nav-link fs-5 texto text-light p-0" href="./contato.html">Contato</a>

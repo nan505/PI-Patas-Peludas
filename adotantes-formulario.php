@@ -2,44 +2,47 @@
 $titulo_pagina = "Patinhas Peludas: Formulário de Adotantes";
 include "inc-head.php";
 ?>
-<body class="bg-light pt-5">
-   <header class="mb-5">
+<body class="site-body pt-5 d-flex flex-column min-vh-100">
+   <header>
    <?php include "inc-nav-admin.php" ?>
    </header>
 
-   <section class="container">
-    <div class="row">
+   <main class="container page-main">
+    <div class="row g-4">
      <div class="col-md-12 col-lg-4">
 
-   <form action="adotantes-salvar.php" method="post" class="border border-4 p-4">
-    <label>Nome:</label><br>
-    <input type="text" name="nomeadotante" required><br>
-    <label>CPF:</label><br>
-    <input type="text" name="cpf" required><br>
-    <label>Telefone: </label><br>
-    <input type="tel" name="telefone" required><br>
-    <label>Nome do animal:</label><br>
-    <input type="text" name="nomeanimal" required><br>
-    <label>CEP:</label><br>
-    <input type="text" name="cep" required><br>
-    <label>Número da residência:</label><br>
-    <input type="number" name="numeroresidencia" required><br>
-    <label>Complemento:</label><br>
-    <input type="text" name="complemento" required><br>
-    <div class="mt-3">
-      <button type="submit">Cadastrar</button>
-      <button type="reset">Limpar</button>
+   <form action="adotantes-salvar.php" method="post" class="form-patinhas p-4">
+    <div class="text-center mb-3">
+      <h1 class="titulo fs-3">Cadastro de adotantes</h1>
+    </div>
+
+    <label>Nome:</label>
+    <input type="text" name="nomeadotante" required>
+    <label>CPF:</label>
+    <input type="text" name="cpf" required>
+    <label>Telefone: </label>
+    <input type="tel" name="telefone" required>
+    <label>Nome do animal:</label>
+    <input type="text" name="nomeanimal" required>
+    <label>CEP:</label>
+    <input type="text" name="cep" required>
+    <label>Número da residência:</label>
+    <input type="number" name="numeroresidencia" required>
+    <label>Complemento:</label>
+    <input type="text" name="complemento" required>
+    <div class="d-flex gap-2 mt-4">
+      <button class="btn btn-patinhas flex-fill" type="submit">Cadastrar</button>
+      <button class="btn btn-patinhas-secundario flex-fill" type="reset">Limpar</button>
    </div>
    </form>
      </div>
     <div class="col-md-12 col-lg-8">
-       <section>
-       <h3>Filtros: </h3>
+       <section class="page-section">
+       <h2 class="titulo fs-3">Filtros</h2>
 
       <?php
       include "inc-conexao.php";
 
-      include "inc-conexao.php";
       $sql = "SELECT * FROM tb_adotantes WHERE 1 = 1";
       $params = [];
       
@@ -47,8 +50,6 @@ include "inc-head.php";
       if(isset($getNome) && $getNome != ""){
       $getNomeTratado = trim(ucfirst(strtolower($getNome)));
       $sqlNome = " AND nome_adotante = ?";
-
-
 
       $sql .= $sqlNome;
       $params[] = $getNome;
@@ -59,24 +60,27 @@ include "inc-head.php";
       $getNomeAnimalTratado = trim(ucfirst(strtolower($getNomeAnimal)));
       $sqlNomeAnimal = " AND animal_adotado = ?";
 
-      
-
       $sql .= $sqlNomeAnimal;
       $params[] = $getNomeAnimal;
       }
       ?>
 
-<form action="" method="GET">
-   <label>Nome: </label>
-   <input type="text" name="filtro_nome">
-   <br>
-   <label>Nome do animal:</label>
-   <input type="text" name="filtro_nome_animal">
-   <button type="submit">Filtrar</button>
-   <button type="reset" onclick="fnLimparURL()">Limpar Filtros</button>
+<form action="" method="GET" class="filter-form row g-3 align-items-end mb-4">
+   <div class="col-md-6">
+      <label>Nome: </label>
+      <input type="text" name="filtro_nome">
+   </div>
+   <div class="col-md-6">
+      <label>Nome do animal:</label>
+      <input type="text" name="filtro_nome_animal">
+   </div>
+   <div class="col-12 d-flex gap-2">
+      <button class="btn btn-patinhas" type="submit">Filtrar</button>
+      <button class="btn btn-patinhas-secundario" type="reset" onclick="fnLimparURL()">Limpar Filtros</button>
+   </div>
 </form>
 
-      </section>
+      <div class="table-patinhas">
       <table class="table table-striped table-hover border">
          <thead>
             <tr>
@@ -92,8 +96,6 @@ include "inc-head.php";
          </thead>
          <?php
          $resultado = mysqli_execute_query($conn, $sql, $params);
-
-         
 
          while($linha_resultado = mysqli_fetch_assoc ($resultado))
          {
@@ -113,9 +115,11 @@ include "inc-head.php";
          mysqli_close($conn);
          ?>
       </table>
+      </div>
+      </section>
     </div>
     </div>
 
-</section>
+</main>
 
 <?php include "inc-footer-admin.php"; ?>
