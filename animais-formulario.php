@@ -84,11 +84,12 @@ include "inc-head.php";
 
                         $getNome = $_GET['filtro_nome'] ?? null;
                         if(isset($getNome) && $getNome != ""){
-                            $getNomeTratado = trim(ucfirst(strtolower($getNome)));
+                            $getNomeTratado = trim(ucfirst(strtolower($getNome) ));
+                            
                             $sqlNome = " AND nome = ?";
 
                             $sql .= $sqlNome;
-                            $params[] = $getNome;
+                            $params[] = $getNomeTratado;
                         }
 
                         $getIdadeMinima = $_GET['filtro_idade_minima'] ?? null;
@@ -215,7 +216,12 @@ include "inc-head.php";
 
                             echo "<td> {$linha_resultado['id']} </td>";
                             echo "<td> <a href='animais-editar.php?id={$linha_resultado['id']}'> {$linha_resultado['nome']} </a> </td>";
-                            echo "<td> {$linha_resultado['idade']} anos </td>";
+                            if($linha_resultado['idade'] > 1){
+                                echo "<td> {$linha_resultado['idade']} anos </td>";
+                            }
+                            else{
+                                echo "<td> {$linha_resultado['idade']} ano </td>";
+                            }
 
                             if($linha_resultado['vermifugado'] == 1){
                                 echo "<td> Sim </td>";

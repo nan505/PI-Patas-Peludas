@@ -82,11 +82,15 @@ include "inc-head.php";
                     <label>Caminho da foto do animal:</label>
                     <input type="text" name="foto" value="<?=$foto; ?>" required>
 
+                    <br><br>
+
+                    <button type="submit" class="btn btn-patinhas-secundario flex-fill">Atualizar</button>
+                    <button type="submit" class="btn btn-patinhas-secundario flex-fill">Deletar</button>
                 </form>
             </div>
 
             <div class="col-4">
-                <img class="img-fluid" src="<?=$foto; ?>" alt="Foto do animal <?=$nome ?>">
+                <img class="img-fluid rounded" src="<?=$foto; ?>" alt="Foto do animal <?=$nome ?>">
             </div>
 
         </div>
