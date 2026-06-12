@@ -9,12 +9,12 @@ if( ($funcao != "atualizar" && $funcao != "deletar") || $id == null || $id == ""
 
 include "inc-conexao.php";
 
-$nome = $_POST['nome'];
+$nome = trim($_POST['nome']);
 $vermifugado = $_POST['vermifugado'];
-$possui_doenca = $_POST['possui_doenca'];
+$possui_doenca = trim($_POST['possui_doenca']);
 $castrado = $_POST['foi_castrado'];
 $idade = $_POST['idade'];
-$foto = $_POST['foto'];
+$foto = trim($_POST['foto']);
 
 $sql = "";
 $params = [$nome, $vermifugado, $possui_doenca, $castrado, $idade, $foto, $id];

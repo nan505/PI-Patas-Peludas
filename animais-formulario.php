@@ -14,16 +14,18 @@ include "inc-head.php";
             <div class="row g-4">
 
                 <div class="col-md-12 col-lg-4">
-                    <form action="animais-salvar.php" method="post" class="form-patinhas p-4">
+                    <form id="formAnimais" action="animais-salvar.php" method="post" class="form-patinhas p-4">
                         <div class="text-center mb-3">
                             <h1 class="titulo fs-3">Cadastro de animais</h1>
                         </div>
 
+                        <p id="mensagemErro" style="color: red"></p>
+
                         <label>Nome do animal:</label>
-                        <input type="text" name="nome" pattern="^[ 0-9a-zA-Z\u00C0-\u00FF\b]+$" required>
+                        <input id="nome" type="text" name="nome" pattern="^[ 0-9a-zA-Z\u00C0-\u00FF\b]+$" required>
 
                         <label>Informe a idade do animal:</label>
-                        <input type="number" name="idade" min="0" max="40" pattern="0-9" required>
+                        <input id="idade" type="number" name="idade" min="0" max="40" pattern="0-9" required>
 
                         <label>O animal foi vermifugado?</label>
                         <div>
@@ -58,7 +60,7 @@ include "inc-head.php";
                         </div>
 
                         <label>Imagem do animal:</label>
-                        <input type="text" name="url_imagem" required>
+                        <input id="url_imagem" type="text" name="url_imagem" required>
 
                         <div class="d-flex gap-2 mt-4">
                             <button class="btn btn-patinhas flex-fill" type="submit">Cadastrar</button>
@@ -273,5 +275,7 @@ include "inc-head.php";
         }
         
         ?>
+
+        <script src="./js/animais-formulario.js"></script>
 
 <?php include "inc-footer-admin.php"; ?>
