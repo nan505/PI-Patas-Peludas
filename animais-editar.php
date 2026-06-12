@@ -39,6 +39,8 @@ include "inc-head.php";
                         <h2>Editar formulário de: <?=$nome; ?></h2>
                     </div>
 
+                    <input type="number" name="id" value="<?=$id ?>" hidden>
+
                     <label>Nome do animal:</label>
                     <input type="text" name="nome" pattern="^[ 0-9a-zA-Z\u00C0-\u00FF\b]+$" value="<?=$nome; ?>" required>
 
@@ -84,8 +86,8 @@ include "inc-head.php";
 
                     <br><br>
 
-                    <button type="submit" class="btn btn-patinhas-secundario flex-fill">Atualizar</button>
-                    <button type="submit" class="btn btn-patinhas-secundario flex-fill">Deletar</button>
+                    <button type="submit" name="funcao" value="atualizar" class="btn btn-patinhas flex-fill">Atualizar</button>
+                    <button type="submit" name="funcao" value="deletar" class="btn btn-patinhas-vermelho flex-fill">Deletar</button>
                 </form>
             </div>
 

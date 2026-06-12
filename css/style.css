@@ -135,6 +135,20 @@ body.site-body,
     color: #003142;
 }
 
+.btn-patinhas-vermelho{
+    background-color: tomato;
+    border-color: rgb(202, 63, 38);
+    color: #ffff;
+    font-family: Lato;
+    font-weight: 700;
+}
+
+.btn-patinhas-vermelho:hover{
+    background-color: rgb(218, 85, 61);
+    border-color: rgb(173, 54, 33);
+    color: rgb(19, 4, 1);
+}
+
 .img-sobre {
     width: 100%;
     max-height: 420px;
