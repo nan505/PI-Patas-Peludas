@@ -3,7 +3,7 @@
 $funcao = $_POST['funcao'] ?? null;
 $id = $_POST['id'] ?? null;
 
-if($funcao != "atualizar" || $funcao != "deletar" || $id == null || $id == "" || $id <= 0){
+if( ($funcao != "atualizar" && $funcao != "deletar") || $id == null || $id == "" || $id <= 0){
     header("location: animais-editar.php?id={$id}&mensagem=erro");
 }
 
