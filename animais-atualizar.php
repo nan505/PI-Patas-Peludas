@@ -21,7 +21,7 @@ $params = [$nome, $vermifugado, $possui_doenca, $castrado, $idade, $foto, $id];
 
 if($funcao == "atualizar"){
     $sql = "UPDATE tb_informacoes_gatos SET nome = ?, vermifugado = ?, possui_doenca = ?, castrado = ?, idade = ?, foto = ? WHERE id = ?";
-    $resultado = mysqli_execute_query($conn, $sql, [$params]);
+    $resultado = mysqli_execute_query($conn, $sql, $params);
 }
 
 if($funcao == "deletar"){
