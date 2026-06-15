@@ -20,6 +20,23 @@ ob_start();
 <head>
     <meta charset="UTF-8">
     <title>Formulario de Adotante</title>
+    <style>
+            body{
+                font-family: Arial, sans-serif;
+                font-size: 12px;
+                margin: 30px;
+            }
+
+            h1{
+                text-align: center;
+            }
+
+            section{
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                padding: 10px;
+            }
+    </style>
 </head>
 <body>
 
@@ -49,7 +66,7 @@ ob_start();
     <p>Vacinado: <?= $conteudo['vacinado'] ?></p>
     <p>Observações: <?= $conteudo['observacoes'] ?></p>
 </section>
-    
+    <div style="page-break-before: always;"></div>
 <section>
         <h2>DECLARAÇÃO DO(A) ADOTANTE:</h2>
         <p>

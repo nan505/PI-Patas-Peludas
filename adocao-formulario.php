@@ -1,7 +1,21 @@
-<body>
-    <h1 class="titulo-ong">Patinhas Peludas</h1>
+<?php
+$titulo_pagina = "Patinhas Peludas: Formulário de Adoção";
+include "inc-head.php";
+?>
 
-    <form action="gerar-pdf.php" method="post">
+<body>
+    <header>
+   <?php include "inc-nav-admin.php" ?>
+   </header>
+
+    <main class="container page-main">
+    <div class="">
+    <div class="">   
+
+    <form action="gerar-pdf.php" method="post" class="form-patinhas p-4">
+    <div class="text-center mb-3">
+    <h1 class="titulo fs-3">Patinhas Peludas</h1>
+    </div> 
     <section>
     <h2>Dados do Adotante:</h2>
     <label>Nome do Adotante:</label>
@@ -140,11 +154,14 @@
 <br>
 
 <div>
-    <label>Observações:</label>
-    <input type="text" name="observacoes">
+    <label>Observações:</label><br>
+    <textarea name="observacoes"></textarea>
 </div>
 </section>
-<button type="submit" name="btn-gerar" value="Gerar PDF">Gerar PDF</button>
+<button type="submit" name="btn-gerar" value="Gerar PDF" class="btn btn-patinhas flex-fill">Gerar PDF</button>
 
 </form>
-</body>
+</div> 
+</div> 
+</main>
+<?php include "inc-footer-admin.php"; ?>
