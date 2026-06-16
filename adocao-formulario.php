@@ -1,6 +1,12 @@
 <?php
 $titulo_pagina = "Patinhas Peludas: Formulário de Adoção";
 include "inc-head.php";
+
+include "inc-conexao.php";
+
+$resultadoNomeAdotantes = mysqli_execute_query($conn, "SELECT id, nome_adotante FROM tb_adotantes");
+$resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_informacoes_gatos");
+
 ?>
 
 <body>
@@ -19,7 +25,16 @@ include "inc-head.php";
     <section>
     <h2>Dados do Adotante:</h2>
     <label>Nome do Adotante:</label>
-    <input type="text" name="nome">
+    <!-- <input type="text" name="nome" required> -->
+    <select name="nome" required>
+        <?php
+
+        while($linha_resultado = mysqli_fetch_assoc($resultadoNomeAdotantes) ){
+            echo "<option value='{$linha_resultado['id']}'>{$linha_resultado['nome_adotante']}</option>";
+        }
+
+        ?>
+    </select>  
 
     <br><br>
 
@@ -44,7 +59,7 @@ include "inc-head.php";
     <br><br>
 
     <label>E-mail:</label>
-    <input type="email" name="email">
+    <input type="email" name="email" placeholder="email@dominio.com.br">
     </section>
     <br><br>
 <section>
@@ -52,7 +67,16 @@ include "inc-head.php";
 
 <div>
     <label>Nome do animal:</label>
-    <input type="text" name="nomeAnimal">
+    <!-- <input type="text" name="nomeAnimal" required> -->
+    <select name="nomeAnimal" required>
+        <?php
+        
+        while($linha_resultado = mysqli_fetch_assoc($resultadoNomeAnimais) ){
+            echo "<option value='{$linha_resultado['id']}'>{$linha_resultado['nome']}</option>";
+        }
+        
+        ?>
+    </select>
 </div>
 
 <br>
@@ -72,7 +96,7 @@ include "inc-head.php";
 <div>
     <label>Porte:</label>
 
-    <input type="radio" name="porte" value="Mini">
+    <input type="radio" name="porte" value="Mini" required>
     <label>Mini</label>
 
     <input type="radio" name="porte" value="Pequeno">
@@ -90,7 +114,7 @@ include "inc-head.php";
 <div>
     <label>Espécie:</label>
 
-    <input type="radio" name="especie" value="Canina">
+    <input type="radio" name="especie" value="Canina" required>
     <label>Canina</label>
 
     <input type="radio" name="especie" value="Felina">
@@ -102,7 +126,7 @@ include "inc-head.php";
 <div>
     <label>Sexo:</label>
 
-    <input type="radio" name="sexo" value="Fêmea">
+    <input type="radio" name="sexo" value="Fêmea" required>
     <label>Fêmea</label>
 
     <input type="radio" name="sexo" value="Macho">
@@ -114,7 +138,7 @@ include "inc-head.php";
 <div>
     <label>Castrado?</label>
 
-    <input type="radio" name="castrado" value="Sim">
+    <input type="radio" name="castrado" value="Sim" required>
     <label>Sim</label>
 
     <input type="radio" name="castrado" value="Não">
@@ -126,7 +150,7 @@ include "inc-head.php";
 <div>
     <label>Vermifugado nos últimos três meses?</label>
 
-    <input type="radio" name="vermifugado" value="Sim">
+    <input type="radio" name="vermifugado" value="Sim" required>
     <label>Sim</label>
 
     <input type="radio" name="vermifugado" value="Não">

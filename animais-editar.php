@@ -98,6 +98,8 @@ include "inc-head.php";
         </div>
     </main>
 
+    <div class="mb-4"></div>
+
     <script src="./js/animais-formulario.js"></script>
 
 <?php include "inc-footer-admin.php"; ?>
