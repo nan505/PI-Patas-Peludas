@@ -34,7 +34,7 @@ include "inc-head.php";
         <div class="row">
 
             <div class="col-8">
-                <form action="animais-atualizar.php" method="post" class="form-patinhas p-4">
+                <form action="animais-atualizar.php" id="formAnimais" method="post" class="form-patinhas p-4">
                     <div class="text-center mb-3">
                         <h2>Editar formulário de: <?=$nome; ?></h2>
                     </div>
@@ -42,10 +42,10 @@ include "inc-head.php";
                     <input type="number" name="id" value="<?=$id ?>" hidden>
 
                     <label>Nome do animal:</label>
-                    <input type="text" name="nome" pattern="^[ 0-9a-zA-Z\u00C0-\u00FF\b]+$" value="<?=$nome; ?>" required>
+                    <input id="nome" type="text" name="nome" pattern="^[ 0-9a-zA-Z\u00C0-\u00FF\b]+$" value="<?=$nome; ?>" required>
 
                     <label>Idade:</label>
-                    <input type="number" name="idade" min="0" max="40" pattern="0-9" value="<?=$idade; ?>" required>
+                    <input id="idade" type="number" name="idade" min="0" max="40" pattern="0-9" value="<?=$idade; ?>" required>
 
                     <label>Vermifugado:</label>
                     <select name="vermifugado" required>
@@ -82,7 +82,7 @@ include "inc-head.php";
                     </select>
 
                     <label>Caminho da foto do animal:</label>
-                    <input type="text" name="foto" value="<?=$foto; ?>" required>
+                    <input id="url_imagem" type="text" name="foto" value="<?=$foto; ?>" required>
 
                     <br><br>
 
@@ -97,5 +97,7 @@ include "inc-head.php";
 
         </div>
     </main>
+
+    <script src="./js/animais-formulario.js"></script>
 
 <?php include "inc-footer-admin.php"; ?>

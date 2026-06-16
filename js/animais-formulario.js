@@ -18,13 +18,15 @@ formAnimais.addEventListener('submit', function(eventoSubmit){
     }
 
     const campoIdade = document.getElementById('idade')
-    const valueIdadeInt = parseInt(campoIdade.value)
+    const valueIdadeInt = parseInt(campoIdade.value) ?? null
 
+    if(valueIdadeInt == null){
+        return
+    }
     if(regexNumeros.test(valueIdadeInt) == false){
         mensagemErro.innerText = "A idade do animal informada deve ser um número inteiro válido"
         return
     }
-    if(Number.isInteger(valueIdadeInt))
     if(valueIdadeInt < 0){
         return
     }
@@ -41,5 +43,5 @@ formAnimais.addEventListener('submit', function(eventoSubmit){
         return
     }
 
-    eventoSubmit.submit()
+    this.submit()
 })
