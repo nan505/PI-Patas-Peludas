@@ -14,6 +14,9 @@
                             <li class="nav-item mb-1">
                                 <a class="nav-link fs-5 texto text-light p-0" href="adotantes-formulario.php">Formulário de adotantes</a>
                             </li>
+                            <li class="nav-item mb-1">
+                                <a class="nav-link fs-5 texto text-light p-0" href="adocao-formulario.php">Formulário de adoção</a>
+                            </li>
                         </ul>
                     </nav>  
                 </div>
