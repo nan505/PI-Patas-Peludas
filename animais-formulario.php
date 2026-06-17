@@ -197,7 +197,7 @@ include "inc-head.php";
                         </form>
 
                     <div class="table-patinhas">
-                    <table class="table table-striped table-hover border">
+                    <table class="table table-striped table-hover table-bordered border">
                         <thead>
                             <tr>
                                 <th>ID</th>
