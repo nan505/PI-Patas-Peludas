@@ -30,7 +30,7 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
         <?php
 
         while($linha_resultado = mysqli_fetch_assoc($resultadoNomeAdotantes) ){
-            echo "<option value='{$linha_resultado['id']}'>{$linha_resultado['nome_adotante']}</option>";
+            echo "<option value='{$linha_resultado['nome_adotante']}'>{$linha_resultado['nome_adotante']}</option>";
         }
 
         ?>
@@ -72,7 +72,7 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
         <?php
         
         while($linha_resultado = mysqli_fetch_assoc($resultadoNomeAnimais) ){
-            echo "<option value='{$linha_resultado['id']}'>{$linha_resultado['nome']}</option>";
+            echo "<option value='{$linha_resultado['nome']}'>{$linha_resultado['nome']}</option>";
         }
         
         ?>
