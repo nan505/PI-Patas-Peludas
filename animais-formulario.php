@@ -75,7 +75,7 @@ include "inc-head.php";
                     <!-- Os filtros funcionam com base na concatenação de novos comandos na variável "$sql", e validam se as variáveis "GET" foram atribuídas corretamente! -Nan -->
                     <!-- O array "$params" armazena o valor das variáveis que serão utilizados no lugar dos pontos de interrogação quando o script SQL for executado! -Nan -->
                     <section class="page-section">
-                        <h2 class="titulo fs-3">Filtros</h2>
+                        <h2 class="titulo fs-3 mb-3">Filtros</h2>
                         <?php
 
                         include "inc-conexao.php";
