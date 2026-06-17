@@ -10,7 +10,7 @@ include "inc-head.php";
         <?php include "inc-nav-admin.php"; ?>
     </header>
 
-        <main class="container page-main">
+        <main class="container page-main mb-4">
             <div class="row g-4">
 
                 <div class="col-md-12 col-lg-4">

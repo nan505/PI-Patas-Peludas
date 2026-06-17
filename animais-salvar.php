@@ -1,8 +1,8 @@
 <?php
 
-$nome = trim($_POST['nome']);
+$nome = ucfirst(trim($_POST['nome']));
 $string_foi_vermifugado = $_POST['foi_vermifugado'];
-$possui_doenca = trim($_POST['possui_doenca'] ?? '');
+$possui_doenca = ucfirst(trim($_POST['possui_doenca']) ?? '');
 $string_foi_castrado = $_POST['foi_castrado'];
 $idade = $_POST['idade'];
 $url_imagem = trim($_POST['url_imagem']);

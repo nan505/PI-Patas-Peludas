@@ -27,6 +27,7 @@
 .img-card{
     max-width: 100%;
     max-height: 500px;
+    object-fit: cover;
 }
 
 .img-card-gato {
@@ -164,6 +165,10 @@ body.site-body,
 .logsombra{
         /* colocar sombra no texto */
     text-shadow: 1px 1px 2px #724bb1;
+}
+
+.card-clicavel:hover{
+    cursor: pointer;
 }
 
 /* inferno */

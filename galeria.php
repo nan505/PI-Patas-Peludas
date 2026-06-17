@@ -24,11 +24,19 @@ include "inc-head.php";
         if ($resultado) {
             while ($linha = mysqli_fetch_assoc($resultado)) {
                 $nomeGato = htmlspecialchars($linha['nome'], ENT_QUOTES, 'UTF-8');
-                $infoFrent = (int) $linha['idade'] . ' anos';
-                $doenca = !empty($linha['possui_doenca']) ? htmlspecialchars($linha['possui_doenca'], ENT_QUOTES, 'UTF-8') : 'Nao possui doenca informada';
-                $vermifugado = $linha['vermifugado'] == 1 ? 'Sim' : 'Nao';
-                $castrado = $linha['castrado'] == 1 ? 'Sim' : 'Nao';
-                $infoTras = "Vermifugado: {$vermifugado}<br>Doenca: {$doenca}<br>Castrado: {$castrado}";
+
+                $infoFrent = $linha['idade'] ?? null;
+                if($infoFrent == 1){
+                    $infoFrent = (int) $infoFrent . ' ano';
+                }
+                else{
+                    $infoFrent = (int) $infoFrent . ' anos';
+                }
+
+                $doenca = !empty($linha['possui_doenca']) ? htmlspecialchars($linha['possui_doenca'], ENT_QUOTES, 'UTF-8') : 'Não possui doença informada';
+                $vermifugado = $linha['vermifugado'] == 1 ? 'Sim' : 'Não';
+                $castrado = $linha['castrado'] == 1 ? 'Sim' : 'Não';
+                $infoTras = "Vermifugado: {$vermifugado}<br>Doença: {$doenca}<br>Castrado: {$castrado}";
                 $fotoCat = htmlspecialchars($linha['foto'], ENT_QUOTES, 'UTF-8');
 
                 include "inc-card.php";
