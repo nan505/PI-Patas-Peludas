@@ -3,7 +3,7 @@
 $funcao = $_POST['funcao'] ?? null;
 $id = $_POST['id'] ?? null;
 
-if( ($funcao != "atualizar" && $funcao != "deletar") || $id == null || $id == "" || $id <= 0){
+if( ($funcao != "atualizar" && $funcao != "deletar") || $id <= 0){
     header("location: animais-editar.php?id={$id}&mensagem=erro");
     exit;
 }
@@ -15,10 +15,10 @@ $vermifugado = $_POST['vermifugado'];
 $possui_doenca = trim($_POST['possui_doenca']);
 $castrado = $_POST['foi_castrado'];
 $idade = $_POST['idade'];
-$foto = trim($_POST['foto']);
+$imagem = trim($_POST['imagem']);
 
 $sql = "";
-$params = [$nome, $vermifugado, $possui_doenca, $castrado, $idade, $foto, $id];
+$params = [$nome, $vermifugado, $possui_doenca, $castrado, $idade, $imagem, $id];
 
 if($funcao == "atualizar"){
     $sql = "UPDATE tb_informacoes_gatos SET nome = ?, vermifugado = ?, possui_doenca = ?, castrado = ?, idade = ?, foto = ? WHERE id = ?";
