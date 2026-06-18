@@ -49,21 +49,6 @@ formAnimais.addEventListener('submit', function(eventoSubmit){
         return
     }
 
-    const campoFoto = document.getElementById('url_imagem')
-
-    if(campoFoto.value.length < 3){
-        mensagemErro.innerText = "O caminho da imagem informado é muito curto."
-        campoFoto.focus()
-        fnScrollTopoFormulario()
-        return
-    }
-    if(campoFoto.value.length > 1000){
-        mensagemErro.innerText = "O caminho da imagem informado é muito longo."
-        campoFoto.focus()
-        fnScrollTopoFormulario()
-        return
-    }
-
     this.submit()
 })
 

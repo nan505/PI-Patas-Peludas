@@ -5,6 +5,7 @@ $id = $_POST['id'] ?? null;
 
 if( ($funcao != "atualizar" && $funcao != "deletar") || $id == null || $id == "" || $id <= 0){
     header("location: animais-editar.php?id={$id}&mensagem=erro");
+    exit;
 }
 
 include "inc-conexao.php";
@@ -31,5 +32,6 @@ if($funcao == "deletar"){
 
 mysqli_close($conn);
 header("location: animais-formulario.php");
+exit;
 
 ?>

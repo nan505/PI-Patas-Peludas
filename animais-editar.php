@@ -39,6 +39,8 @@ include "inc-head.php";
                         <h2>Editar formulário de: <?=$nome; ?></h2>
                     </div>
 
+                    <p id="mensagemErro" style="color: red"></p>
+
                     <input type="number" name="id" value="<?=$id ?>" hidden>
 
                     <label>Nome do animal:</label>
