@@ -8,7 +8,7 @@ if($id == null || $id == "" || $id < 1){
 
 include "inc-conexao.php";
 
-$nome = $idade = $foi_vermifugado = $possui_doenca = $foi_castrado = $foto = "";
+$nome = $idade = $foi_vermifugado = $possui_doenca = $foi_castrado = $imagem = "";
 $resultado = mysqli_execute_query($conn, "SELECT * FROM tb_informacoes_gatos WHERE id = ?", [$id]);
 
 while($linha = mysqli_fetch_assoc($resultado) ){
@@ -17,7 +17,7 @@ while($linha = mysqli_fetch_assoc($resultado) ){
     $foi_vermifugado = $linha['vermifugado'];
     $possui_doenca = $linha['possui_doenca'];
     $foi_castrado = $linha['castrado'];
-    $foto = $linha['foto'];
+    $imagem = $linha['foto'];
 }
 
 $titulo_pagina = "Patinhas Peludas: Formulário de {$nome}";
@@ -38,6 +38,8 @@ include "inc-head.php";
                     <div class="text-center mb-3">
                         <h2>Editar formulário de: <?=$nome; ?></h2>
                     </div>
+
+                    <p id="mensagemErro" style="color: red"></p>
 
                     <input type="number" name="id" value="<?=$id ?>" hidden>
 
@@ -82,17 +84,17 @@ include "inc-head.php";
                     </select>
 
                     <label>Caminho da foto do animal:</label>
-                    <input id="url_imagem" type="text" name="foto" value="<?=$foto; ?>" required>
+                    <input id="imagem" type="text" name="imagem" value="<?=$imagem; ?>" required>
 
                     <br><br>
 
-                    <button type="submit" name="funcao" value="atualizar" class="btn btn-patinhas flex-fill">Atualizar</button>
-                    <button type="submit" name="funcao" value="deletar" class="btn btn-patinhas-vermelho flex-fill">Deletar</button>
+                    <button type="submit" id="btnFuncao" name="funcao" value="atualizar" class="btn btn-patinhas flex-fill">Atualizar</button>
+                    <button type="submit" id="btnFuncao" name="funcao" value="deletar" class="btn btn-patinhas-vermelho flex-fill">Deletar</button>
                 </form>
             </div>
 
             <div class="col-4">
-                <img class="img-fluid rounded" src="<?=$foto; ?>" alt="Foto do animal <?=$nome ?>">
+                <img class="img-fluid rounded" src="<?=$imagem; ?>" alt="Foto do animal <?=$nome ?>">
             </div>
 
         </div>
@@ -100,6 +102,6 @@ include "inc-head.php";
 
     <div class="mb-4"></div>
 
-    <script src="./js/animais-formulario.js"></script>
+    <script src="./js/animais-editar.js"></script>
 
 <?php include "inc-footer-admin.php"; ?>

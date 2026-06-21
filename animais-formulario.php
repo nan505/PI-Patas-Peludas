@@ -14,7 +14,7 @@ include "inc-head.php";
             <div class="row g-4">
 
                 <div class="col-md-12 col-lg-4">
-                    <form id="formAnimais" action="animais-salvar.php" method="post" class="form-patinhas p-4">
+                    <form id="formAnimais" action="animais-salvar.php" method="post" enctype="multipart/form-data" class="form-patinhas p-4">
                         <div class="text-center mb-3">
                             <h1 class="titulo fs-3">Cadastro de animais</h1>
                         </div>
@@ -60,7 +60,7 @@ include "inc-head.php";
                         </div>
 
                         <label>Imagem do animal:</label>
-                        <input id="url_imagem" type="text" name="url_imagem" required>
+                        <input id="imagem" type="file" name="imagem" accept="image/*" required>
 
                         <div class="d-flex gap-2 mt-4">
                             <button class="btn btn-patinhas flex-fill" type="submit">Cadastrar</button>

@@ -1,5 +1,16 @@
 const formAnimais = document.getElementById('formAnimais')
 
+// querySelectorAll retorna ambos os botões submit pelo ID "btnFuncao"
+const botoesSubmit = document.querySelectorAll('#btnFuncao')
+let valorBtnSubmit = ""
+
+// Verificando cada um dos botões caso um deles seja clicado, e captura o valor do botão clicado na variável "funcaoSubmit"
+botoesSubmit.forEach(btn => {
+    btn.addEventListener('click', function(eventoClick){
+        valorBtnSubmit = this.value
+    })
+})
+
 formAnimais.addEventListener('submit', function(eventoSubmit){
     eventoSubmit.preventDefault()
 
@@ -48,6 +59,16 @@ formAnimais.addEventListener('submit', function(eventoSubmit){
         fnScrollTopoFormulario()
         return
     }
+
+    // Criando o input escondido que será enviado via POST para a página PHP
+    const inputFuncao = document.createElement('input')
+
+    inputFuncao.type = 'hidden'
+    inputFuncao.name = 'funcao'
+    inputFuncao.value = valorBtnSubmit
+    
+    // Adiciona o input escondido no formulário para ser enviado
+    this.appendChild(inputFuncao)
 
     this.submit()
 })
