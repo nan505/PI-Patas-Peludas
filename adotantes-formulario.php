@@ -12,36 +12,53 @@ include "inc-head.php";
      <div class="col-md-12 col-lg-4">
 
    <form action="adotantes-salvar.php" method="post" class="form-patinhas p-4">
-    <div class="text-center mb-3">
-      <h1 class="titulo fs-3">Cadastro de adotantes</h1>
-    </div>
+      <div class="text-center mb-3">
+         <h1 class="titulo fs-3">Cadastro de adotantes</h1>
+      </div>
 
-    <label>Nome:</label>
-    <input type="text" name="nomeadotante" required>
-    <label>CPF:</label>
-    <input type="text" name="cpf" required>
-    <label>Telefone: </label>
-    <input type="tel" name="telefone" required>
-    <label>Nome do animal:</label>
-    <input type="text" name="nomeanimal" required>
-    <label>CEP:</label>
-    <input type="text" name="cep" required>
-    <label>Número da residência:</label>
-    <input type="number" name="numeroresidencia" required>
-    <label>Complemento:</label>
-    <input type="text" name="complemento" required>
-    <div class="d-flex gap-2 mt-4">
-      <button class="btn btn-patinhas flex-fill" type="submit">Cadastrar</button>
-      <button class="btn btn-patinhas-secundario flex-fill" type="reset">Limpar</button>
-   </div>
+      <label>Nome:</label>
+      <input type="text" name="nomeadotante" required>
+      <label>CPF:</label>
+      <input type="text" name="cpf" required>
+      <label>Telefone: </label>
+      <input type="tel" name="telefone" required>
+    
+
+      <label>Nome do animal:</label>
+      <select name="nomeanimal" required>
+      <?php
+
+      // Caso for remover esse pedaço de código, lembre-se de incluir a conexão na próxima vez que um PHP for aberto!
+      include "inc-conexao.php";
+      $sqlNomeSelect = "SELECT id, nome FROM tb_informacoes_gatos";
+      $resultado = mysqli_execute_query($conn, $sqlNomeSelect);
+
+      while($linha_resultado = mysqli_fetch_assoc($resultado) ){
+         echo "<option value='{$linha_resultado['id']}'>{$linha_resultado['nome']}</option>";
+      }
+
+      ?>
+      </select>
+
+      <!-- <input type="text" name="nomeanimal" required> -->
+
+      <label>CEP:</label>
+      <input type="text" name="cep" required>
+      <label>Número da residência:</label>
+      <input type="number" name="numeroresidencia" required>
+      <label>Complemento:</label>
+      <input type="text" name="complemento" required>
+      <div class="d-flex gap-2 mt-4">
+         <button class="btn btn-patinhas flex-fill" type="submit">Cadastrar</button>
+         <button class="btn btn-patinhas-secundario flex-fill" type="reset">Limpar</button>
+      </div>
    </form>
-     </div>
+   </div>
     <div class="col-md-12 col-lg-8">
        <section class="page-section">
        <h2 class="titulo fs-3">Filtros</h2>
 
       <?php
-      include "inc-conexao.php";
 
       $sql = "SELECT * FROM tb_adotantes WHERE 1 = 1";
       $params = [];
@@ -67,7 +84,7 @@ include "inc-head.php";
 
 <form action="" method="GET" class="filter-form row g-3 align-items-end mb-4">
    <div class="col-md-6">
-      <label>Nome: </label>
+      <label>Nome do adotante: </label>
       <input type="text" name="filtro_nome">
    </div>
    <div class="col-md-6">
@@ -102,7 +119,7 @@ include "inc-head.php";
             echo '<tr>';
 
             echo "<td> {$linha_resultado['id']} </td>";
-            echo "<td> {$linha_resultado['nome_adotante']} </td>";
+            echo "<td> <a href='adotantes-editar.php?id={$linha_resultado['id']}'> {$linha_resultado['nome_adotante']} </a> </td>";
             echo "<td> {$linha_resultado['cpf']} </td>";
             echo "<td> {$linha_resultado['telefone']} </td>";
             echo "<td> {$linha_resultado['animal_adotado']} </td>";
