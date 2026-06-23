@@ -9,11 +9,13 @@ if($id == null || $id == "" || $id < 1){
 include "inc-conexao.php";
 
 $nome = $idade = $foi_vermifugado = $possui_doenca = $foi_castrado = $imagem = "";
+$idade_unidade = "anos";
 $resultado = mysqli_execute_query($conn, "SELECT * FROM tb_informacoes_gatos WHERE id = ?", [$id]);
 
 while($linha = mysqli_fetch_assoc($resultado) ){
     $nome = $linha['nome'];
     $idade = $linha['idade'];
+    $idade_unidade = $linha['idade_unidade'] ?? "anos";
     $foi_vermifugado = $linha['vermifugado'];
     $possui_doenca = $linha['possui_doenca'];
     $foi_castrado = $linha['castrado'];
@@ -48,6 +50,12 @@ include "inc-head.php";
 
                     <label>Idade:</label>
                     <input id="idade" type="number" name="idade" min="0" max="40" pattern="0-9" value="<?=$idade; ?>" required>
+
+                    <label for="idade_unidade">Unidade da idade:</label>
+                    <select id="idade_unidade" name="idade_unidade" required>
+                        <option value="anos" <?php if($idade_unidade == "anos"){echo "selected";} ?>>Anos</option>
+                        <option value="meses" <?php if($idade_unidade == "meses"){echo "selected";} ?>>Meses</option>
+                    </select>
 
                     <label>Vermifugado:</label>
                     <select name="vermifugado" required>

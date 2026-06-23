@@ -27,6 +27,12 @@ include "inc-head.php";
                         <label for="idade">Informe a idade do animal:</label>
                         <input id="idade" type="number" name="idade" min="0" max="40" pattern="0-9" required>
 
+                        <label for="idade_unidade">Unidade da idade:</label>
+                        <select id="idade_unidade" name="idade_unidade" required>
+                            <option value="anos">Anos</option>
+                            <option value="meses">Meses</option>
+                        </select>
+
                         <label>O animal foi vermifugado?</label>
                         <div>
                             <input type="radio" name="foi_vermifugado" value="sim" required>
@@ -79,6 +85,7 @@ include "inc-head.php";
                         <?php
 
                         include "inc-conexao.php";
+                        include_once "inc-formatar-idade.php";
 
                         $sql = "SELECT * FROM tb_informacoes_gatos WHERE 1 = 1";
                         $params = [];
@@ -218,12 +225,7 @@ include "inc-head.php";
 
                             echo "<td> {$linha_resultado['id']} </td>";
                             echo "<td> <a href='animais-editar.php?id={$linha_resultado['id']}'> {$linha_resultado['nome']} </a> </td>";
-                            if($linha_resultado['idade'] > 1){
-                                echo "<td> {$linha_resultado['idade']} anos </td>";
-                            }
-                            else{
-                                echo "<td> {$linha_resultado['idade']} ano </td>";
-                            }
+                            echo "<td> " . formatar_idade_animal($linha_resultado['idade'], $linha_resultado['idade_unidade'] ?? "anos") . " </td>";
 
                             if($linha_resultado['vermifugado'] == 1){
                                 echo "<td> Sim </td>";

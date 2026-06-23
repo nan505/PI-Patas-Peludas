@@ -15,13 +15,18 @@ $vermifugado = $_POST['vermifugado'];
 $possui_doenca = trim($_POST['possui_doenca']);
 $castrado = $_POST['foi_castrado'];
 $idade = $_POST['idade'];
+$idade_unidade = $_POST['idade_unidade'] ?? 'anos';
 $imagem = trim($_POST['imagem']);
 
+if($idade_unidade != 'anos' && $idade_unidade != 'meses'){
+    $idade_unidade = 'anos';
+}
+
 $sql = "";
-$params = [$nome, $vermifugado, $possui_doenca, $castrado, $idade, $imagem, $id];
+$params = [$nome, $vermifugado, $possui_doenca, $castrado, $idade, $idade_unidade, $imagem, $id];
 
 if($funcao == "atualizar"){
-    $sql = "UPDATE tb_informacoes_gatos SET nome = ?, vermifugado = ?, possui_doenca = ?, castrado = ?, idade = ?, foto = ? WHERE id = ?";
+    $sql = "UPDATE tb_informacoes_gatos SET nome = ?, vermifugado = ?, possui_doenca = ?, castrado = ?, idade = ?, idade_unidade = ?, foto = ? WHERE id = ?";
     $resultado = mysqli_execute_query($conn, $sql, $params);
 }
 
