@@ -63,7 +63,7 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
     </section>
     <br><br>
 <section>
-    <h2>DADOS DO ANIMAL ADOTADO</h2>
+    <h2>Dados do Animal Adotado</h2>
 
 <div>
     <label>Nome do animal:</label>
@@ -96,6 +96,8 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
 <div>
     <label>Porte:</label>
 
+    <br>
+
     <input type="radio" name="porte" value="Mini" required>
     <label>Mini</label>
 
@@ -114,6 +116,8 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
 <div>
     <label>Espécie:</label>
 
+    <br>
+
     <input type="radio" name="especie" value="Canina" required>
     <label>Canina</label>
 
@@ -125,6 +129,8 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
 
 <div>
     <label>Sexo:</label>
+
+    <br>
 
     <input type="radio" name="sexo" value="Fêmea" required>
     <label>Fêmea</label>
@@ -138,6 +144,8 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
 <div>
     <label>Castrado?</label>
 
+    <br>
+
     <input type="radio" name="castrado" value="Sim" required>
     <label>Sim</label>
 
@@ -149,6 +157,8 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
 
 <div>
     <label>Vermifugado nos últimos três meses?</label>
+
+    <br>
 
     <input type="radio" name="vermifugado" value="Sim" required>
     <label>Sim</label>
@@ -164,6 +174,8 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
 
 <div>
     <label>Vacinado?</label>
+
+    <br>
 
     <input type="radio" name="vacinado" value="Sim">
     <label>Sim</label>
