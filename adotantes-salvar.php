@@ -2,12 +2,20 @@
 $nome = $_POST['nomeadotante'];
 $cpf = $_POST['cpf'];
 $telefone = $_POST['telefone'];
-$nomeanimal = $_POST['nomeanimal'];
+$idnomeanimal = $_POST['nomeanimal'];
+$nomeanimal = "";
 $cep = $_POST['cep'];
 $numeroresidencia = $_POST['numeroresidencia'];
 $complemento = $_POST['complemento'];
 
 include "inc-conexao.php";
+
+$sql = "SELECT nome FROM tb_informacoes_gatos WHERE id = ?";
+$resultadoNome = mysqli_execute_query($conn, $sql, [$idnomeanimal]);
+
+if($linha_resultado = mysqli_fetch_assoc($resultadoNome) ){
+    $nomeanimal = $linha_resultado['nome'];
+}
 
 $resultado = mysqli_execute_query($conn, "INSERT INTO tb_adotantes(nome_adotante, cpf, telefone, animal_adotado, cep, numero_residencia, complemento) VALUES (?, ?, ?, ?, ?, ?, ?)", [$nome, $cpf, $telefone, $nomeanimal, $cep, $numeroresidencia, $complemento]);
 

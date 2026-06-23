@@ -21,10 +21,10 @@ include "inc-head.php";
 
                         <p id="mensagemErro" style="color: red"></p>
 
-                        <label>Nome do animal:</label>
+                        <label for="nome">Nome do animal:</label>
                         <input id="nome" type="text" name="nome" pattern="^[ 0-9a-zA-Z\u00C0-\u00FF\b]+$" required>
 
-                        <label>Informe a idade do animal:</label>
+                        <label for="idade">Informe a idade do animal:</label>
                         <input id="idade" type="number" name="idade" min="0" max="40" pattern="0-9" required>
 
                         <label>O animal foi vermifugado?</label>
