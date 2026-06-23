@@ -19,15 +19,20 @@ $numero_residencia = $_POST['numero_residencia'];
 $complemento = $_POST['complemento'];
 
 $sql = "";
-$params = [$nome_adotante, $cpf, $telefone, $animal_adotado, $cep, $numero_residencia, $complemento];
+$params = [$nome_adotante, $cpf, $telefone, $animal_adotado, $cep, $numero_residencia, $complemento, $id];
 
 if($funcao == "atualizar"){
-    $sql = "UPDATE tb_adotantes SET nome_adotante = ?, cpf = ?, telefone = ?, animal_adotado = ?, cep = ?, numero_residencia = ?, complemento = ?";
+    $sql = "UPDATE tb_adotantes SET nome_adotante = ?, cpf = ?, telefone = ?, animal_adotado = ?, cep = ?, numero_residencia = ?, complemento = ? WHERE id = ?";
     $resultado = mysqli_execute_query($conn, $sql, $params);
 }
 
 if($funcao == "deletar"){
     $sql = "DELETE FROM tb_adotantes WHERE id = ?";
+    $resultado = mysqli_execute_query($conn, $sql, [$id]);
 }
+
+mysqli_close($conn);
+header("location: adotantes-formulario.php");
+exit;
 
 ?>
