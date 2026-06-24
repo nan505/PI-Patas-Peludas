@@ -22,7 +22,9 @@ formAnimais.addEventListener('submit', function(eventoSubmit){
     }
 
     const campoIdade = document.getElementById('idade')
+    const campoIdadeUnidade = document.getElementById('idade_unidade')
     const valueIdadeInt = parseInt(campoIdade.value) ?? null
+    const idadeMaxima = campoIdadeUnidade.value === 'meses' ? 12 : 40
 
     if(valueIdadeInt == null){
         mensagemErro.innerText = "O campo de idade do animal deve ser preenchido."
@@ -42,7 +44,7 @@ formAnimais.addEventListener('submit', function(eventoSubmit){
         fnScrollTopoFormulario()
         return
     }
-    if(valueIdadeInt > 40){
+    if(valueIdadeInt > idadeMaxima){
         mensagemErro.innerText = "A idade do animal informada é maior que o limite máximo permitido."
         campoIdade.focus()
         fnScrollTopoFormulario()

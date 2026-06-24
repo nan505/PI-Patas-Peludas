@@ -5,6 +5,11 @@ $string_foi_vermifugado = $_POST['foi_vermifugado'];
 $possui_doenca = ucfirst(trim($_POST['possui_doenca']) ?? '');
 $string_foi_castrado = $_POST['foi_castrado'];
 $idade = $_POST['idade'];
+$idade_unidade = $_POST['idade_unidade'] ?? 'anos';
+
+if($idade_unidade != 'anos' && $idade_unidade != 'meses'){
+    $idade_unidade = 'anos';
+}
 
 $pasta_destino = "img/";
 $imagem = $pasta_destino . $_FILES['imagem']['name'];
@@ -29,8 +34,8 @@ if($string_foi_castrado == "sim"){
 
 include "inc-conexao.php";
 
-$resultado = mysqli_execute_query($conn, "INSERT INTO tb_informacoes_gatos(nome, vermifugado, possui_doenca, castrado, idade, foto) VALUES
-(?, ?, ?, ?, ?, ?)", [$nome, $foi_vermifugado, $possui_doenca, $foi_castrado, $idade, $imagem]);
+$resultado = mysqli_execute_query($conn, "INSERT INTO tb_informacoes_gatos(nome, vermifugado, possui_doenca, castrado, idade, idade_unidade, foto) VALUES
+(?, ?, ?, ?, ?, ?, ?)", [$nome, $foi_vermifugado, $possui_doenca, $foi_castrado, $idade, $idade_unidade, $imagem]);
 
 mysqli_close($conn);
 

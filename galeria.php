@@ -10,7 +10,8 @@ include "inc-head.php";
     </header>
 <?php
     include "inc-conexao.php";
-    $sql = "SELECT nome, vermifugado, possui_doenca, castrado, idade, foto FROM tb_informacoes_gatos";
+    include_once "inc-formatar-idade.php";
+    $sql = "SELECT nome, vermifugado, possui_doenca, castrado, idade, idade_unidade, foto FROM tb_informacoes_gatos";
     $resultado = mysqli_query($conn, $sql);
 ?>
 
@@ -25,13 +26,7 @@ include "inc-head.php";
             while ($linha = mysqli_fetch_assoc($resultado)) {
                 $nomeGato = htmlspecialchars($linha['nome'], ENT_QUOTES, 'UTF-8');
 
-                $infoFrent = $linha['idade'] ?? null;
-                if($infoFrent == 1){
-                    $infoFrent = (int) $infoFrent . ' ano';
-                }
-                else{
-                    $infoFrent = (int) $infoFrent . ' anos';
-                }
+                $infoFrent = formatar_idade_animal($linha['idade'] ?? 0, $linha['idade_unidade'] ?? "anos");
 
                 $doenca = !empty($linha['possui_doenca']) ? htmlspecialchars($linha['possui_doenca'], ENT_QUOTES, 'UTF-8') : 'Não possui doença informada';
                 $vermifugado = $linha['vermifugado'] == 1 ? 'Sim' : 'Não';
