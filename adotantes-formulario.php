@@ -27,8 +27,8 @@ include "inc-head.php";
     
 
       <label>Nome do animal:</label>
-      <select name="nomeanimal" required>
-         <option></option>
+      <select id="nomeanimal" name="nomeanimal" required>
+         <option value="">Selecione um animal</option>
       <?php
 
       // Caso for remover esse pedaço de código, lembre-se de incluir a conexão na próxima vez que um PHP for aberto!

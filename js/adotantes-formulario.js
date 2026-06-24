@@ -61,6 +61,15 @@ formAdotantes.addEventListener('submit', function(eventoSubmit){
         return
     }
 
+    const campoNomeAnimal = document.getElementById('nomeanimal')
+
+    if(campoNomeAnimal.value == "" || campoNomeAnimal.value == null || campoNomeAnimal.value.length < 1){
+        mensagemErro.innerText = "Selecione o nome válido de um animal."
+        campoNomeAnimal.focus()
+        fnScrollTopoFormulario()
+        return
+    }
+
     const campoCEP = document.getElementById('cep')
     const intCEP = parseInt(campoCEP.value)
 
