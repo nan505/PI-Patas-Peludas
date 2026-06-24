@@ -1,5 +1,6 @@
 <?php 
 $nome = $_POST['nomeadotante'];
+$nomeTratado = ucwords(trim(preg_replace('/\s+/', ' ', $nome) ) );
 $cpf = $_POST['cpf'];
 $telefone = $_POST['telefone'];
 $idnomeanimal = $_POST['nomeanimal'];
@@ -17,7 +18,7 @@ if($linha_resultado = mysqli_fetch_assoc($resultadoNome) ){
     $nomeanimal = $linha_resultado['nome'];
 }
 
-$resultado = mysqli_execute_query($conn, "INSERT INTO tb_adotantes(nome_adotante, cpf, telefone, animal_adotado, cep, numero_residencia, complemento) VALUES (?, ?, ?, ?, ?, ?, ?)", [$nome, $cpf, $telefone, $nomeanimal, $cep, $numeroresidencia, $complemento]);
+$resultado = mysqli_execute_query($conn, "INSERT INTO tb_adotantes(nome_adotante, cpf, telefone, animal_adotado, cep, numero_residencia, complemento) VALUES (?, ?, ?, ?, ?, ?, ?)", [$nomeTratado, $cpf, $telefone, $nomeanimal, $cep, $numeroresidencia, $complemento]);
 
 mysqli_close($conn);
 header("location: adotantes-formulario.php?mensagem=sucesso");

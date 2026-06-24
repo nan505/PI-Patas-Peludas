@@ -7,25 +7,28 @@ include "inc-head.php";
    <?php include "inc-nav-admin.php" ?>
    </header>
 
-   <main class="container page-main">
+   <main class="container page-main mb-4">
     <div class="row g-4">
      <div class="col-md-12 col-lg-4">
 
-   <form action="adotantes-salvar.php" method="post" class="form-patinhas p-4">
+   <form id="formAdotantes" action="adotantes-salvar.php" method="post" class="form-patinhas p-4">
       <div class="text-center mb-3">
          <h1 class="titulo fs-3">Cadastro de adotantes</h1>
       </div>
 
-      <label>Nome:</label>
-      <input type="text" name="nomeadotante" required>
+      <p id="mensagemErro" style="color: red"></p>
+
+      <label>Nome completo:</label>
+      <input id="nomeadotante" type="text" name="nomeadotante" required>
       <label>CPF:</label>
-      <input type="text" name="cpf" required>
+      <input id="cpf" type="text" name="cpf" placeholder="000-000-000.00" required>
       <label>Telefone: </label>
-      <input type="tel" name="telefone" required>
+      <input id="telefone" type="tel" name="telefone" placeholder="(19) 99999-9999" required>
     
 
       <label>Nome do animal:</label>
       <select name="nomeanimal" required>
+         <option></option>
       <?php
 
       // Caso for remover esse pedaço de código, lembre-se de incluir a conexão na próxima vez que um PHP for aberto!
@@ -43,11 +46,11 @@ include "inc-head.php";
       <!-- <input type="text" name="nomeanimal" required> -->
 
       <label>CEP:</label>
-      <input type="text" name="cep" required>
+      <input id="cep" type="text" name="cep" placeholder="00000-000" required>
       <label>Número da residência:</label>
-      <input type="number" name="numeroresidencia" required>
+      <input id="numeroresidencia" type="number" name="numeroresidencia" required>
       <label>Complemento:</label>
-      <input type="text" name="complemento" required>
+      <input type="text" name="complemento">
       <div class="d-flex gap-2 mt-4">
          <button class="btn btn-patinhas flex-fill" type="submit">Cadastrar</button>
          <button class="btn btn-patinhas-secundario flex-fill" type="reset">Limpar</button>
@@ -138,5 +141,7 @@ include "inc-head.php";
     </div>
 
 </main>
+
+<script src="./js/adotantes-formulario.js"></script>
 
 <?php include "inc-footer-admin.php"; ?>

@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `tb_adotantes`;
 CREATE TABLE `tb_adotantes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome_adotante` varchar(250) NOT NULL,
-  `cpf` varchar(10) NOT NULL,
+  `cpf` varchar(11) NOT NULL,
   `telefone` varchar(11) NOT NULL,
   `animal_adotado` varchar(150) NOT NULL,
   `cep` varchar(9) NOT NULL,
