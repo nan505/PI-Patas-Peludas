@@ -30,4 +30,6 @@ $resultado = mysqli_execute_query($conn, "INSERT INTO tb_adotantes(nome_adotante
 
 mysqli_close($conn);
 header("location: adotantes-formulario.php?mensagem=sucesso");
+exit;
+
 ?>
