@@ -3,7 +3,9 @@ const formAdotantes = document.getElementById('formAdotantes')
 formAdotantes.addEventListener('submit', function(eventoSubmit){
     eventoSubmit.preventDefault()
 
+    // Regex para validar se a string possui apenas letras e pelo menos um espaço para verificar se é o nome completo que está sendo informado
     const regexNomeCompleto = /^[A-Za-zÀ-ÿ]+(?:\s[A-Za-zÀ-ÿ]+)+$/
+
     const regexNumeros = /^\d+$/
     const mensagemErro = document.getElementById('mensagemErro')
 
@@ -111,6 +113,7 @@ formAdotantes.addEventListener('submit', function(eventoSubmit){
     this.submit()
 })
 
+// Função que faz a página voltar ao topo
 function fnScrollTopoFormulario(){
     window.scrollTo({
         top: 0,
