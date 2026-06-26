@@ -171,6 +171,17 @@ body.site-body,
     cursor: pointer;
 }
 
+/* reduzir a largura do formulário */
+.form-wi {
+    width: 680px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+    .form-patinhas {
+        width: 100%;
+}
+
 /* inferno */
 .flip-card {
     height: 100%;

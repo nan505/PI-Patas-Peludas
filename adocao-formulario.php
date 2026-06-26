@@ -9,16 +9,17 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
 
 ?>
 
-<body>
+<body class="bg-light site-body">
     <header>
    <?php include "inc-nav-admin.php" ?>
    </header>
 
     <main class="container page-main">
     <div class="">
-    <div class="">   
+    <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2   bg-white shadow">   
 
-    <form action="gerar-pdf.php" method="post" class="form-patinhas p-4">
+    
+    <form action="gerar-pdf.php" method="post" class="form-patinhas p-4 form-wi mb-4 ">
     <div class="text-center mb-3">
     <h1 class="titulo fs-3">Patinhas Peludas</h1>
     </div> 
@@ -191,10 +192,10 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
 
 <div>
     <label>Observações:</label><br>
-    <textarea name="observacoes"></textarea>
+    <textarea class="form-control" name="observacoes"></textarea>
 </div>
 </section>
-<button type="submit" name="btn-gerar" value="Gerar PDF" class="btn btn-patinhas flex-fill">Gerar PDF</button>
+<button type="submit" name="btn-gerar" value="Gerar PDF" class="btn btn-patinhas flex-fill mt-3">Gerar PDF</button>
 
 </form>
 </div> 
