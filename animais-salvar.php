@@ -40,5 +40,6 @@ $resultado = mysqli_execute_query($conn, "INSERT INTO tb_informacoes_gatos(nome,
 mysqli_close($conn);
 
 header("location: animais-formulario.php?mensagem=sucesso");
+exit;
 
 ?>
