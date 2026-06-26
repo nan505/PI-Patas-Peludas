@@ -1,5 +1,6 @@
 <?php
 
+// Obtendo a função equivalente ao botão apertado!
 $funcao = $_POST['funcao'] ?? null;
 $id = $_POST['id'] ?? null;
 
@@ -19,7 +20,11 @@ $numero_residencia = $_POST['numero_residencia'];
 $complemento = $_POST['complemento'];
 
 $sql = "";
+
+// Parâmetros que substituirão as interrogações (?) do script SQL com o comando "mysqli_execute_query()"
 $params = [$nome_adotante, $cpf, $telefone, $animal_adotado, $cep, $numero_residencia, $complemento, $id];
+
+// Alterando o script SQL com base na função obtida via POST
 
 if($funcao == "atualizar"){
     $sql = "UPDATE tb_adotantes SET nome_adotante = ?, cpf = ?, telefone = ?, animal_adotado = ?, cep = ?, numero_residencia = ?, complemento = ? WHERE id = ?";

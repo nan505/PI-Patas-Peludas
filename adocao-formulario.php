@@ -23,13 +23,15 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
     <div class="text-center mb-3">
     <h1 class="titulo fs-3">Patinhas Peludas</h1>
     </div> 
+    <p id="mensagemErro" style="color: red"></p>
     <section>
     <h2>Dados do Adotante:</h2>
     <label>Nome do Adotante:</label>
     <!-- <input type="text" name="nome" required> -->
-    <select name="nome" required>
+    <select name="nome" id="nome" required>
         <?php
 
+        // Exibindo as opções com o nome de todos os nomes de adotantes cadastrados no banco de dados!
         while($linha_resultado = mysqli_fetch_assoc($resultadoNomeAdotantes) ){
             echo "<option value='{$linha_resultado['nome_adotante']}'>{$linha_resultado['nome_adotante']}</option>";
         }
@@ -40,27 +42,27 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
     <br><br>
 
     <label>Endereço:</label>
-    <input type="text" name="endereco">
+    <input type="text" name="endereco" id="endereco">
 
     <br><br>
 
     <label>RG:</label>
-    <input type="text" name="rg">
+    <input type="text" name="rg" id="rg" required>
 
     <br><br>
 
     <label>CPF/CNPJ:</label>
-    <input type="text" name="cpf">
+    <input type="text" name="cpf" id="cpf">
 
     <br><br>
 
     <label>Telefone para contato:</label>
-    <input type="tel" name="telefone">
+    <input type="tel" name="telefone" id="telefone">
 
     <br><br>
 
     <label>E-mail:</label>
-    <input type="email" name="email" placeholder="email@dominio.com.br">
+    <input type="email" name="email" placeholder="email@dominio.com.br" id="email">
     </section>
     <br><br>
 <section>
@@ -69,9 +71,10 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
 <div>
     <label>Nome do animal:</label>
     <!-- <input type="text" name="nomeAnimal" required> -->
-    <select name="nomeAnimal" required>
+    <select name="nomeAnimal" id="nomeAnimal" required>
         <?php
         
+        // Exibindo as opções com o nome de todos os os nomes de animais cadastrados no banco de dados!
         while($linha_resultado = mysqli_fetch_assoc($resultadoNomeAnimais) ){
             echo "<option value='{$linha_resultado['nome']}'>{$linha_resultado['nome']}</option>";
         }
@@ -84,12 +87,12 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
 
 <div>
     <label>Raça:</label>
-    <input type="text" name="raca">
+    <input type="text" name="raca" id="raca">
 
     <br><br>
 
     <label>Idade:</label>
-    <input type="number" name="idade">
+    <input type="number" name="idade" id="">
 </div>
 
 <br>
@@ -99,7 +102,7 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
 
     <br>
 
-    <input type="radio" name="porte" value="Mini" required>
+    <input type="radio" name="porte" value="Mini"  required>
     <label>Mini</label>
 
     <input type="radio" name="porte" value="Pequeno">
@@ -192,10 +195,10 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
 
 <div>
     <label>Observações:</label><br>
-    <textarea class="form-control" name="observacoes"></textarea>
+    <textarea name="observacoes" id="observacoes"></textarea>
 </div>
 </section>
-<button type="submit" name="btn-gerar" value="Gerar PDF" class="btn btn-patinhas flex-fill mt-3">Gerar PDF</button>
+<button type="submit" name="btn-gerar" value="Gerar PDF" class="btn btn-patinhas flex-fill" onclick="fnValidarAdocao()">Gerar PDF</button>
 
 </form>
 </div> 
