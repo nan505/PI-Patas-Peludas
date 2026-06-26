@@ -2,8 +2,10 @@
 
 $id = $_GET['id'] ?? null;
 
+// Validando se o ID é nulo, vazio ou menor que um, e envia o usuário de volta para a página de formulário caso seja verdadeiro
 if($id == null || $id == "" || $id < 1){
     header('Location:adotantes-formulario.php?mensagem=erro');
+    exit;
 }
 
 include "inc-conexao.php";

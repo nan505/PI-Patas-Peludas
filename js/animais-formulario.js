@@ -54,6 +54,7 @@ formAnimais.addEventListener('submit', function(eventoSubmit){
     this.submit()
 })
 
+// Função que faz a página voltar ao topo
 function fnScrollTopoFormulario(){
     window.scrollTo({
         top: 0,

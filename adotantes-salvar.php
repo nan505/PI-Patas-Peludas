@@ -1,6 +1,14 @@
 <?php 
 $nome = $_POST['nomeadotante'];
-$nomeTratado = ucwords(trim(preg_replace('/\s+/', ' ', $nome) ) );
+
+// Explicando cada comando utilizado:
+    // preg_replace('/\s+/', ' ', $nome) - Substitui mais de um espaço seguido por apenas um espaço
+    // trim() - Remove os espaços no início e final da string
+    // strtolower() - Deixa todas as letras da string em minúsculo
+    // ucwords() - Todas as palavras (Texto inicial e subsequentes separados por espaço) da string terão o primeiro caractere convertido para maiúsculo 
+$nomeTratado = ucwords(strtolower(trim(preg_replace('/\s+/', ' ', $nome) ) ) );
+
+
 $cpf = $_POST['cpf'];
 $telefone = $_POST['telefone'];
 $idnomeanimal = $_POST['nomeanimal'];
