@@ -87,11 +87,10 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
 <div>
     <label>Raça:</label>
     <input type="text" name="raca" id="raca">
-
     <br><br>
 
     <label>Idade:</label>
-    <input type="number" name="idade" id="">
+    <input type="number" name="idade" id="idade">
 </div>
 
 <br>
