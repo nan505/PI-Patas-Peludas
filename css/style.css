@@ -24,6 +24,125 @@
     height: 540px;
 }
 
+.home-hero {
+    position: relative;
+    box-shadow: 0 1rem 2rem rgba(2, 43, 58, 0.18);
+}
+
+.home-hero .carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(2, 43, 58, 0.72), rgba(2, 43, 58, 0.18));
+}
+
+.home-hero-caption {
+    left: 8%;
+    right: auto;
+    bottom: 18%;
+    max-width: 560px;
+    text-align: left;
+    z-index: 2;
+}
+
+.home-hero-caption h1 {
+    font-size: 4rem;
+    text-shadow: 0 0.25rem 0.75rem rgba(2, 43, 58, 0.45);
+}
+
+.home-hero-caption p {
+    font-size: 1.35rem;
+    margin-bottom: 0;
+}
+
+.home-section {
+    margin-top: 4rem;
+}
+
+.section-label {
+    display: inline-block;
+    color: #06485f;
+    font-size: 0.85rem;
+    font-weight: 900;
+    letter-spacing: 0;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.texto-sobre {
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+
+.home-about-img,
+.img-galeria {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0.75rem 1.5rem rgba(2, 43, 58, 0.13);
+}
+
+.home-about-img {
+    max-height: 420px;
+    object-fit: cover;
+}
+
+.img-galeria {
+    height: 360px;
+}
+
+.review-card {
+    border: 1px solid rgba(2, 43, 58, 0.12);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 0.5rem 1.25rem rgba(2, 43, 58, 0.08);
+}
+
+.review-card h4 {
+    color: #022B3A;
+    font-family: Martel;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.review-card p {
+    color: #365462;
+    font-family: Lato;
+    margin-bottom: 0;
+}
+
+.review-img {
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+    .banner-carrossel {
+        height: 420px;
+    }
+
+    .home-hero-caption {
+        left: 6%;
+        right: 6%;
+        bottom: 14%;
+    }
+
+    .home-hero-caption h1 {
+        font-size: 2.35rem;
+    }
+
+    .home-hero-caption p {
+        font-size: 1rem;
+    }
+
+    .home-section {
+        margin-top: 2.75rem;
+    }
+
+    .img-galeria {
+        height: 280px;
+    }
+}
+
 .img-card{
     max-width: 100%;
     max-height: 500px;
