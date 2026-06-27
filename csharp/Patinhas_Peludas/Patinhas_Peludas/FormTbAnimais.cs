@@ -39,5 +39,45 @@ namespace Patinhas_Peludas
                 conn.Close();
             }
         }
+
+        private void btnConsultarNome_Click(object sender, EventArgs e)
+        {
+            string nomeConsulta = tBoxNome.Text;
+
+            using(MySqlConnection conn = new MySqlConnection(DADOS_CONN))
+            {
+                conn.Open();
+                
+                string scriptConsultaNome = "";
+
+                if(nomeConsulta != string.Empty)
+                {
+                    scriptConsultaNome = "SELECT * FROM tb_informacoes_gatos WHERE nome LIKE @nome";
+                }
+                else
+                {
+                    scriptConsultaNome = "SELECT * FROM tb_informacoes_gatos";
+                }
+
+                using(MySqlCommand comando = new MySqlCommand(scriptConsultaNome, conn))
+                {
+                    if(nomeConsulta != string.Empty)
+                    {
+                        comando.Parameters.AddWithValue("@nome", nomeConsulta + "%");
+                    }
+
+                    MySqlDataAdapter resultadoConsultaMySQL = new MySqlDataAdapter(comando);
+
+                    DataTable dt = new DataTable();
+
+                    resultadoConsultaMySQL.Fill(dt);
+
+                    dgvTbAnimais.DataSource = dt;
+                }
+
+                conn.Close();
+            }
+            
+        }
     }
 }
