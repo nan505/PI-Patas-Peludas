@@ -18,8 +18,7 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
     <div class="">
     <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2   bg-white shadow">   
 
-    
-    <form action="gerar-pdf.php" method="post" class="form-patinhas p-4 form-wi mb-4 ">
+    <form id="formAdocao" action="gerar-pdf.php" method="post" class="form-patinhas p-4 form-wi">
     <div class="text-center mb-3">
     <h1 class="titulo fs-3">Patinhas Peludas</h1>
     </div> 
@@ -197,10 +196,12 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
     <textarea name="observacoes" id="observacoes"></textarea>
 </div>
 </section>
-<button type="submit" name="btn-gerar" value="Gerar PDF" class="btn btn-patinhas flex-fill" onclick="fnValidarAdocao()">Gerar PDF</button>
+<button id="btnGerar" type="submit" name="btn-gerar" value="Gerar PDF" class="btn btn-patinhas flex-fill">Gerar PDF</button>
 
 </form>
 </div> 
 </div> 
 </main>
+<script src="./js/adocao.js"></script>
 <?php include "inc-footer-admin.php"; ?>
+
