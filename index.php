@@ -56,10 +56,10 @@ include "inc-head.php";
             <div class="col-12 col-md-6">
                 <span class="section-label texto">Nossa hist&oacute;ria</span>
                 <h1 id="sobre" class="titulo ancoras">Um pouco sobre n&oacute;s:</h1>
-                <p class="texto texto-sobre">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam iusto fuga tenetur asperiores reiciendis magni? Dicta dolores a hic temporibus commodi expedita aperiam nisi. Repudiandae necessitatibus similique iusto fugiat dolorem?</p>
+                <p class="texto texto-sobre">O início de nossa ONG reflete ao carinho e gratidão ao nossos companheiros peludos que em momentos difíceis  e de tristeza ficaram ao nosso lado, trazendo calma e alívio.</p>
             </div>
             <div class="col-12 col-md-6">
-                <img class="img-fluid home-about-img" src="./img/gatoguerra.jpg" alt="Gato da ONG">
+                <img class="img-fluid home-about-img" src="./img/richalisodeitado.jpg" alt="Gato da ONG">
             </div>
         </div>
     </section>
