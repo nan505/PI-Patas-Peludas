@@ -52,14 +52,14 @@ include "inc-head.php";
     </header>
 
     <section class="container home-section">
-        <div class="row align-items-center g-4">
+        <div class="row align-items-center page-section g-4">
             <div class="col-12 col-md-6">
                 <span class="section-label texto">Nossa hist&oacute;ria</span>
                 <h1 id="sobre" class="titulo ancoras">Um pouco sobre n&oacute;s:</h1>
                 <p class="texto texto-sobre">O início de nossa ONG reflete ao carinho e gratidão ao nossos companheiros peludos que em momentos difíceis  e de tristeza ficaram ao nosso lado, trazendo calma e alívio.</p>
             </div>
             <div class="col-12 col-md-6">
-                <img class="img-fluid home-about-img" src="./img/richalisodeitado.jpg" alt="Gato da ONG">
+                <img class="img-fluid home-about-img" src="./img/richalisodeitado.jpg" alt="Gato 'Rycharlisson' da ONG">
             </div>
         </div>
     </section>
@@ -70,7 +70,7 @@ include "inc-head.php";
             <h2 class="texto">Gatos amados e bem cuidados!</h2>
         </div>
 
-        <main class="mt-4">
+        <main class="mt-4 page-section">
             <div class="row">
                 <div class="col-12">
                     <h3 id="galeria" class="titulo ancoras">Fotos da nossa ONG:</h3>
@@ -79,10 +79,10 @@ include "inc-head.php";
 
             <div class="row g-3">
                 <div class="col-12 col-md-6">
-                    <img class="object-fit-cover rounded img-galeria" src="./img/calangoo.jpg" width="412" height="453" alt="Gato da galeria">
+                    <img class="object-fit-cover rounded img-galeria" src="./img/calango.jpg" width="412" height="453" alt="Gato 'Calango' galeria">
                 </div>
                 <div class="col-12 col-md-6">
-                    <img class="object-fit-cover rounded img-galeria" src="./img/irma-xena.jpg" width="412" height="453" alt="Gato da galeria">
+                    <img class="object-fit-cover rounded img-galeria" src="./img/alecrim.jpg" width="412" height="453" alt="Gato 'Alecrim' da galeria">
                 </div>
             </div>
 
@@ -90,7 +90,7 @@ include "inc-head.php";
         </main>
     </section>
 
-    <section class="container home-section pb-5">
+    <section class="container home-section g-4 pb-5">
         <div class="row">
             <div class="col-12">
                 <h3 class="titulo text-center">An&aacute;lises:</h3>

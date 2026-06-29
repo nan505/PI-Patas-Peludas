@@ -35,7 +35,7 @@ include "inc-head.php";
 
                         <label>O animal foi vermifugado?</label>
                         <div>
-                            <input type="radio" name="foi_vermifugado" value="sim" required>
+                            <input type="radio" id="foi_vermifugado" name="foi_vermifugado" value="sim" required>
                             <label>Sim</label>
                         </div>
                         <div>
@@ -65,7 +65,7 @@ include "inc-head.php";
                             <label>Não</label>
                         </div>
 
-                        <label>Imagem do animal:</label>
+                        <label for="imagem">Imagem do animal:</label>
                         <input id="imagem" type="file" name="imagem" accept="image/*" required>
 
                         <div class="d-flex gap-2 mt-4">

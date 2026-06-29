@@ -18,15 +18,17 @@ include "inc-head.php";
 
       <p id="mensagemErro" style="color: red"></p>
 
-      <label>Nome completo:</label>
+      <label for="nomeadotante">Nome completo:</label>
       <input id="nomeadotante" type="text" name="nomeadotante" required>
-      <label>CPF:</label>
+
+      <label for="cpf">CPF:</label>
       <input id="cpf" type="text" name="cpf" placeholder="000-000-000.00" required>
-      <label>Telefone: </label>
+
+      <label for="telefone">Telefone:</label>
       <input id="telefone" type="tel" name="telefone" placeholder="(19) 99999-9999" required>
     
 
-      <label>Nome do animal:</label>
+      <label for="nomeanimal">Nome do animal:</label>
       <select id="nomeanimal" name="nomeanimal" required>
          <option value="">Selecione um animal</option>
       <?php
@@ -45,12 +47,15 @@ include "inc-head.php";
 
       <!-- <input type="text" name="nomeanimal" required> -->
 
-      <label>CEP:</label>
+      <label for="cep">CEP:</label>
       <input id="cep" type="text" name="cep" placeholder="00000-000" required>
-      <label>Número da residência:</label>
+
+      <label for="numeroresidencia">Número da residência:</label>
       <input id="numeroresidencia" type="number" name="numeroresidencia" required>
-      <label>Complemento:</label>
-      <input type="text" name="complemento">
+
+      <label for="complemento">Complemento:</label>
+      <input id="complemento" type="text" name="complemento">
+
       <div class="d-flex gap-2 mt-4">
          <button class="btn btn-patinhas flex-fill" type="submit">Cadastrar</button>
          <button class="btn btn-patinhas-secundario flex-fill" type="reset">Limpar</button>
@@ -87,12 +92,12 @@ include "inc-head.php";
 
 <form action="" method="GET" class="filter-form row g-3 align-items-end mb-4">
    <div class="col-md-6">
-      <label>Nome do adotante: </label>
-      <input type="text" name="filtro_nome">
+      <label for="filtro_nome">Nome do adotante:</label>
+      <input id="filtro_nome" type="text" name="filtro_nome">
    </div>
    <div class="col-md-6">
-      <label>Nome do animal:</label>
-      <input type="text" name="filtro_nome_animal">
+      <label for="filtro_nome_animal">Nome do animal:</label>
+      <input id="filtro_nome_animal" type="text" name="filtro_nome_animal">
    </div>
    <div class="col-12 d-flex gap-2">
       <button class="btn btn-patinhas" type="submit">Filtrar</button>
