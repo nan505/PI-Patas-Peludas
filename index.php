@@ -97,58 +97,26 @@ include "inc-head.php";
             </div>
         </div>
 
-        <div class="row g-3">
-
-            <div class="col-12 col-md-4">
-                <div class="card review-card h-100">
-                    <div class="row g-3 align-items-center">
-                        <div class="col-4">
-                            <img src="./img/cat-dant.jpg" class="img-fluid rounded review-img" alt="Gato em review">
-                        </div>
-                        <div class="col-8">
-                            <h4>Selina Kyle</h4>
-                            <p>"Cuidado e zelo por todos os animais resgatados, excelente trabalho!"</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="row">
 
             <?php
             
             $nomeAdotanteReview = "Selina Kyle";
             $descAdotanteReview = "Cuidado e zelo por todos os animais resgatados, excelente trabalho!";
-            $caminhoImgReview = "";
+            $caminhoImgReview = "./img/reviews/selina.jpg";
+            include "inc-card-review.php";
+
+            $nomeAdotanteReview = "Felicia Hardy";
+            $descAdotanteReview = "Adotei meu primeiro gatinho graças à Patinhas Peludas, equipe extremamente profissional e dedicada.";
+            $caminhoImgReview = "./img/reviews/felicia.jpg";
+            include "inc-card-review.php";
+
+            $nomeAdotanteReview = "T'Challa";
+            $descAdotanteReview = "O compromisso e zelo pelo bem-estar dos animais é impressionante, parabenizo todos os envolvidos!";
+            $caminhoImgReview = "./img/reviews/tchalla.jpg";
             include "inc-card-review.php";
             
             ?>
-
-            <div class="col-12 col-md-4">
-                <div class="card review-card h-100">
-                    <div class="row g-3 align-items-center">
-                        <div class="col-4">
-                            <img src="./img/cat-peso.jpg" class="img-fluid rounded review-img" alt="Gato em review">
-                        </div>
-                        <div class="col-8">
-                            <h4>Felicia Hardy</h4>
-                            <p>"Adotei meu primeiro gatinho graças à Patinhas Peludas, equipe extremamente profissional e dedicada."</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="card review-card h-100">
-                    <div class="row g-3 align-items-center">
-                        <div class="col-4">
-                            <img src="./img/sat-cat.jpg" class="img-fluid rounded review-img" alt="Gato em review">
-                        </div>
-                        <div class="col-8">
-                            <h4>T'Challa</h4>
-                            <p>O compromisso e zelo pelo bem-estar dos animais é impressionante, parabenizo todos os envolvidos!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </div>
 
