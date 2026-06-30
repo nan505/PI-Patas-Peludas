@@ -1,5 +1,7 @@
 <?php
 
+include "inc-sessao-login.php";
+
 $funcao = $_POST['funcao'] ?? null;
 $id = $_POST['id'] ?? null;
 

@@ -1,5 +1,7 @@
 <?php
 
+include "inc-sessao-login.php";
+
 $id = $_GET['id'] ?? null;
 
 if($id == null || $id == "" || $id < 1){

@@ -19,5 +19,6 @@ formAdmin.addEventListener('submit', function(eventoSubmit){
         return
     }
 
+    console.log("Sucesso na validação!")
     this.submit()
 })

@@ -1,4 +1,7 @@
 <?php
+
+include "inc-sessao-login.php";
+
 require 'vendor/autoload.php';
 
 use Dompdf\Dompdf;

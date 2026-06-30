@@ -1,5 +1,7 @@
 <?php
 
+include "inc-sessao-login.php";
+
 $nome = ucfirst(trim($_POST['nome']));
 $string_foi_vermifugado = $_POST['foi_vermifugado'];
 $possui_doenca = ucfirst(trim($_POST['possui_doenca']) ?? '');
