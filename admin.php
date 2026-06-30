@@ -1,24 +1,22 @@
 <?php
 
-$titulo_pagina = "Patinhas Peludas: Administração";
+$titulo_pagina = "Patinhas Peludas: Login de Administrador";
 include "inc-head.php";
 
 ?>
 
-<body class="site-body pt-5 d-flex flex-column min-vh-100">
-    <header>
-        <?php include "inc-nav-admin.php"; ?>
-    </header>
-
+<body class="site-body pt-5 d-flex flex-column min-vh-100 justify-content-center align-items-center">
     <main class="container page-main">
         <section class="page-section">
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-5">
-                    <form method="post" action="..." class="form-patinhas p-4">
+                    <form id="formAdmin" method="post" action="admin-consultar.php" class="form-patinhas p-4">
                         <div class="text-center mb-3">
                             <h1 class="titulo fs-3">Área administrativa</h1>
                             <p class="texto mb-0">Acesse para gerenciar animais e adotantes.</p>
                         </div>
+
+                        <p id="mensagemErro" style="color: red"></p>
 
                         <label for="email_usuario">E-mail:</label>
                         <input id="email_usuario" type="email" name="email_usuario" required>
@@ -36,4 +34,7 @@ include "inc-head.php";
         </section>
     </main>
 
-<?php include "inc-footer-admin.php"; ?>
+    <script src="./js/admin-formulario.php"></script>
+
+</body>
+</html>
