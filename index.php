@@ -79,7 +79,7 @@ include "inc-head.php";
 
             <div class="row g-3">
                 <div class="col-12 col-md-6">
-                    <img class="object-fit-cover rounded img-galeria" src="./img/calango.jpg" width="412" height="453" alt="Gato 'Calango' galeria">
+                    <img class="object-fit-cover rounded img-galeria" src="./img/neguinhawater.jpg" width="412" height="453" alt="Gato 'neguinha' galeria">
                 </div>
                 <div class="col-12 col-md-6">
                     <img class="object-fit-cover rounded img-galeria" src="./img/alecrim.jpg" width="412" height="453" alt="Gato 'Alecrim' da galeria">
