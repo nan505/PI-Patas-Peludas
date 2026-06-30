@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,39 @@ namespace Patinhas_Peludas
         public FormTbAdotante()
         {
             InitializeComponent();
+        }
+
+        const string DADOS_CONN = "server=localhost;user=root;password=;database=db_patinhapeludas";
+
+        private void FormTbAdotantes_load(object sender, EventArgs e)
+        {
+            using (MySqlConnection conn = new MySqlConnection(DADOS_CONN))
+            {
+                conn.Open();
+                string scriptConsulta = "SELECT * FROM tb_adotantes";
+
+                using (MySqlCommand comando = new MySqlCommand(scriptConsulta, conn))
+                {
+                    MySqlDataAdapter resultadoConsulta = new MySqlDataAdapter(comando);
+
+                    DataTable dt = new DataTable();
+                    resultadoConsulta.Fill(dt);
+
+                    dgvTabelaAdotante.DataSource = dt;
+                }
+                conn.Close();
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+
+            string nomeConsulta = tbPesquisar.Text;
+
+            using (MySqlConnection conn = new MySqlConnection(DADOS_CONN));
+            {
+
+            }
         }
     }
 }
