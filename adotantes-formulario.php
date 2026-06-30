@@ -1,4 +1,7 @@
 <?php
+
+include "inc-sessao-login.php";
+
 $titulo_pagina = "Patinhas Peludas: Formulário de Adotantes";
 include "inc-head.php";
 ?>

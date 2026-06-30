@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $titulo_pagina = "Patinhas Peludas: Login de Administrador";
 include "inc-head.php";
 
@@ -19,7 +21,15 @@ include "inc-head.php";
                         <p id="mensagemErro" style="color: red"></p>
 
                         <label for="email_usuario">E-mail:</label>
-                        <input id="email_usuario" type="email" name="email_usuario" required>
+                        <input id="email_usuario" type="email" name="email_usuario" value="
+                        <?php
+
+                        if(isset($_SESSION['email'])){
+                            echo $_SESSION['email'];
+                        }
+
+                        ?>
+                        " required>
 
                         <label for="senha_usuario">Senha:</label>
                         <input id="senha_usuario" type="password" name="senha_usuario" required>
@@ -34,7 +44,13 @@ include "inc-head.php";
         </section>
     </main>
 
-    <script src="./js/admin-formulario.php"></script>
+    <script src="./js/admin-formulario.js"></script>
+
+    <?php 
+
+    session_destroy();
+
+    ?>
 
 </body>
 </html>

@@ -1,4 +1,7 @@
 <?php 
+
+include "inc-sessao-login.php";
+
 $nome = $_POST['nomeadotante'];
 
 // Explicando cada comando utilizado:
