@@ -20,23 +20,23 @@ formAdocao.addEventListener('submit', function(eventoSubmit){
     const nomeTratado = campoNome.value.trim().replace(/\s+/g, ' ')
 
     if(nomeTratado == ""){
-        mensagemErro.innerText = "Preencha o campo nome"
+        mensagemErro.innerText = "Preencha o campo nome!"
         return
     }
     if(nomeTratado.length >= 250){
-       mensagemErro.innerText = "Prencha até 250 caracteres" 
+       mensagemErro.innerText = "Prencha até 250 caracteres o campo nome!" 
        return
     }
 
     const campoEndereco = document.getElementById("endereco")
 
     if(campoEndereco.value.trim() == ""){
-        mensagemErro.innerText = "Preencha o campo endereco"
+        mensagemErro.innerText = "Preencha o campo endereco!"
         return
     }
 
     if(campoEndereco.value.trim().length >= 200){
-        mensagemErro.innerText = "O limite maximo de caracter é de 200"
+        mensagemErro.innerText = "O limite maximo de caracter é de 200 do campo endereço!"
         return
     }
 
@@ -44,7 +44,7 @@ formAdocao.addEventListener('submit', function(eventoSubmit){
     const intRG = parseInt(campoRG.value) ?? null
 
     if(campoRG.value.length != 11){
-        mensagemErro.innerText = "O valor deve ser até 11 caracter!"
+        mensagemErro.innerText = "O valor campo RG deve ser até 11 caracter!"
         return
     }
     if(regexNumeros.test(intRG) == false){
@@ -81,22 +81,27 @@ formAdocao.addEventListener('submit', function(eventoSubmit){
     const campoNomeAnimal = document.getElementById('nomeAnimal')
 
     if(campoNomeAnimal.value.trim() == ""){
-        mensagemErro.innerText = "Preencha o campo"
+        mensagemErro.innerText = "Preencha o campo nome animal!"
         return
     }
 
     if(campoNomeAnimal.value.length >= 150){
-        mensagemErro.innerText = "Limite maximo de caracter de 150!"
+        mensagemErro.innerText = "Limite maximo de caracter de 150 no campo de nome animal!"
         return
     }
 
     const campoRaca = document.getElementById('raca')
+
     if(campoRaca.value.trim() ==""){
-        mensagemErro.innerText = "Preencha o campo"
+        mensagemErro.innerText = "Preencha o campo raça"
         return    
     }
+    if(regexNomeRaca.test(campoRaca) == false){
+        mensagemErro.innerText = "O campo nome raça não permite números ou caracteres especiais."
+    }
+
     if(campoRaca.value.length >= 75){
-        mensagemErro.innerText = "limite maximo de 75 caracter"
+        mensagemErro.innerText = "Limite maximo de 75 caracter no campo raça"
         return
     }
     
@@ -104,11 +109,11 @@ formAdocao.addEventListener('submit', function(eventoSubmit){
     const intIdade = parseInt(campoIdade.value) ?? null
 
     if(regexNumeros.test(intIdade) == false){
-        mensagemErro.innerText = "Campo permite apenas numeros"
+        mensagemErro.innerText = "Campo idade permite apenas números"
         return
     }
     if(campoIdade.value.length != 2){
-         mensagemErro.innerText = "Campo com maximo de 2 digitos"
+         mensagemErro.innerText = "Campo de idade possui o maximo de 2 digitos"
          return
     }
 
