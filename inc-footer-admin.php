@@ -6,7 +6,7 @@
                     <nav>
                         <ul class="nav flex-column align-items-start">
                             <li class="nav-item mb-1">
-                                <a class="nav-link active fs-5 texto text-light p-0 w-auto" aria-current="page" href="admin.php">Início</a>
+                                <a class="nav-link active fs-5 texto text-light p-0 w-auto" aria-current="page" href="admin-autorizado.php">Início</a>
                             </li>
                             <li class="nav-item mb-1">
                                 <a class="nav-link fs-5 texto text-light p-0" href="animais-formulario.php">Formulário de animais</a>
