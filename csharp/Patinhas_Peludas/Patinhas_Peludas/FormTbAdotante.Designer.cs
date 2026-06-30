@@ -28,12 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormTbAdotante";
+            dgvTabelaAdotante = new DataGridView();
+            tbPesquisar = new TextBox();
+            btnPesquisar = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvTabelaAdotante).BeginInit();
+            SuspendLayout();
+            // 
+            // dgvTabelaAdotante
+            // 
+            dgvTabelaAdotante.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTabelaAdotante.Location = new Point(42, 39);
+            dgvTabelaAdotante.Name = "dgvTabelaAdotante";
+            dgvTabelaAdotante.Size = new Size(682, 251);
+            dgvTabelaAdotante.TabIndex = 0;
+            // 
+            // tbPesquisar
+            // 
+            tbPesquisar.Location = new Point(42, 341);
+            tbPesquisar.Name = "tbPesquisar";
+            tbPesquisar.Size = new Size(193, 23);
+            tbPesquisar.TabIndex = 1;
+            // 
+            // btnPesquisar
+            // 
+            btnPesquisar.Location = new Point(255, 331);
+            btnPesquisar.Name = "btnPesquisar";
+            btnPesquisar.Size = new Size(158, 41);
+            btnPesquisar.TabIndex = 2;
+            btnPesquisar.Text = "Pesquisar Nome";
+            btnPesquisar.UseVisualStyleBackColor = true;
+            btnPesquisar.Click += btnPesquisar_Click;
+            // 
+            // FormTbAdotante
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(811, 450);
+            Controls.Add(btnPesquisar);
+            Controls.Add(tbPesquisar);
+            Controls.Add(dgvTabelaAdotante);
+            Name = "FormTbAdotante";
+            Text = "FormTbAdotante";
+            ((System.ComponentModel.ISupportInitialize)dgvTabelaAdotante).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private DataGridView dgvTabelaAdotante;
+        private TextBox tbPesquisar;
+        private Button btnPesquisar;
     }
 }
