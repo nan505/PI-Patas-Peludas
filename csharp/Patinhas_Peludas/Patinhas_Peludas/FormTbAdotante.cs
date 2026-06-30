@@ -43,9 +43,37 @@ namespace Patinhas_Peludas
 
             string nomeConsulta = tbPesquisar.Text;
 
-            using (MySqlConnection conn = new MySqlConnection(DADOS_CONN));
+            using (MySqlConnection conn = new MySqlConnection(DADOS_CONN))
             {
+                conn.Open();
+                string scriptConsultaNome = "";
 
+                if(nomeConsulta != string.Empty)
+                {
+                    scriptConsultaNome = "SELECT * FROM tb_adotantes WHERE nome_adotante LIKE @nome";
+                }
+                else
+                {
+                    scriptConsultaNome = "SELECT * FROM tb_adotantes";
+                }
+
+                using (MySqlCommand comando = new MySqlCommand(scriptConsultaNome, conn))
+                {
+                    if (nomeConsulta != string.Empty)
+                    {
+                        comando.Parameters.AddWithValue("@nome", nomeConsulta + "%");
+                    }
+
+                    MySqlDataAdapter resultadoConsultaMySQL = new MySqlDataAdapter(comando);
+
+                    DataTable dt = new DataTable();
+
+                    resultadoConsultaMySQL.Fill(dt);
+
+                    dgvTabelaAdotante.DataSource= dt;
+                }
+
+                conn.Close() ;
             }
         }
     }

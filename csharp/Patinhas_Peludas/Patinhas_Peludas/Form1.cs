@@ -18,5 +18,11 @@ namespace Patinhas_Peludas
 
             formTbAnimais.ShowDialog();
         }
+
+        private void btnTbAdotantes_Click_1(object sender, EventArgs e)
+        {
+            FormTbAdotante formTbAdotante = new FormTbAdotante();
+            formTbAdotante.ShowDialog();
+        }
     }
 }

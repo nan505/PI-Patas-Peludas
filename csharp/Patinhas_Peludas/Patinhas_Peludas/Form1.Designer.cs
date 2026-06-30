@@ -52,6 +52,7 @@
             btnTbAdotantes.TabIndex = 1;
             btnTbAdotantes.Text = "Tabela de adotantes";
             btnTbAdotantes.UseVisualStyleBackColor = true;
+            btnTbAdotantes.Click += btnTbAdotantes_Click_1;
             // 
             // FormInicio
             // 
