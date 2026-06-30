@@ -31,34 +31,19 @@ formAdotantes.addEventListener('submit', function(eventoSubmit){
         return
     }
 
+    /*validação de CPF*/
     const campoCPF = document.getElementById('cpf')
     const intCPF = parseInt(campoCPF.value) ?? null
 
     if(campoCPF.value.length != 11){
-        mensagemErro.innerText = "O CPF informado deve possuir exatamente onze (11) caracteres numéricos."
+        mensagemErro.innerText = "O CPF informado deve possuir exatamente onze (11) caracteres numericos."
         campoCPF.focus()
         fnScrollTopoFormulario()
         return
     }
     if(regexNumeros.test(intCPF) == false){
-        mensagemErro.innerText = "O CPF deve conter apenas caracteres numéricos."
+        mensagemErro.innerText = "O CPF deve conter apenas caracteres numericos."
         campoCPF.focus()
-        fnScrollTopoFormulario()
-        return
-    }
-
-    const campoTelefone = document.getElementById('telefone')
-    const intTelefone = parseInt(campoTelefone.value) ?? null
-
-    if(campoTelefone.value.length != 11){
-        mensagemErro.innerText = "O número de telefone informado deve possuir exatamente onze (11) caracteres numéricos."
-        campoTelefone.focus()
-        fnScrollTopoFormulario()
-        return
-    }
-    if(regexNumeros.test(intTelefone) == false){
-        mensagemErro.innerText = "O número de telefone deve conter apenas caracteres numéricos."
-        campoTelefone.focus()
         fnScrollTopoFormulario()
         return
     }
@@ -120,3 +105,4 @@ function fnScrollTopoFormulario(){
         behavior: "smooth",
     })
 }
+
