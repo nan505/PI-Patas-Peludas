@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="col-4 text-center mt-3">
-                    <p class="text-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum tempore doloremque doloribus natus laborum ut nulla facilis, praesentium iusto quaerat voluptatem culpa magni? Quia, sed aut sapiente hic deserunt corporis?</p>
+                    <p class="text-light">Conheça nosso trabalho! E nossos gatinhos!</p>
                 </div>
 
             </div>

@@ -17,9 +17,11 @@ $resultadoNomeAnimais = mysqli_execute_query($conn, "SELECT id, nome FROM tb_inf
    <?php include "inc-nav-admin.php" ?>
    </header>
 
-    <main class="container page-main">
+    <div class="mt-5"></div>
+
+    <main class="container page-main mb-5">
     <div class="">
-    <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2   bg-white shadow">   
+    <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-5 pb-5  bg-white shadow">   
 
     <form id="formAdocao" action="gerar-pdf.php" method="post" class="form-patinhas p-4 form-wi">
     <div class="text-center mb-3">

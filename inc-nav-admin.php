@@ -14,10 +14,10 @@
                     <a class="nav-link active fs-4 texto" aria-current="page" href="admin-autorizado.php">Início</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fs-4 texto" href="animais-formulario.php">Formulário de animais</a>
+                    <a class="nav-link fs-4 texto" href="animais-formulario.php">Animais</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fs-4 texto" href="adotantes-formulario.php">Formulário de adotantes</a>
+                    <a class="nav-link fs-4 texto" href="adotantes-formulario.php">Adotantes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fs-4 texto" href="adocao-formulario.php">Formulário de adoção</a>
