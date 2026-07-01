@@ -6,7 +6,7 @@
                     <nav>
                         <ul class="nav flex-column align-items-start">
                             <li class="nav-item mb-1">
-                                <a class="nav-link active fs-5 texto text-light p-0 w-auto" aria-current="page" href="admin.php">Início</a>
+                                <a class="nav-link active fs-5 texto text-light p-0 w-auto" aria-current="page" href="admin-autorizado.php">Início</a>
                             </li>
                             <li class="nav-item mb-1">
                                 <a class="nav-link fs-5 texto text-light p-0" href="animais-formulario.php">Formulário de animais</a>
@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="col-4 text-center mt-3">
-                    <p class="text-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum tempore doloremque doloribus natus laborum ut nulla facilis, praesentium iusto quaerat voluptatem culpa magni? Quia, sed aut sapiente hic deserunt corporis?</p>
+                    <p class="text-light">Conheça nosso trabalho! E nossos gatinhos!</p>
                 </div>
 
             </div>
