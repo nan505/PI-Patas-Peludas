@@ -37,21 +37,21 @@
             // dgvTabelaAdotante
             // 
             dgvTabelaAdotante.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTabelaAdotante.Location = new Point(42, 39);
+            dgvTabelaAdotante.Location = new Point(12, 12);
             dgvTabelaAdotante.Name = "dgvTabelaAdotante";
-            dgvTabelaAdotante.Size = new Size(682, 251);
+            dgvTabelaAdotante.Size = new Size(818, 361);
             dgvTabelaAdotante.TabIndex = 0;
             // 
             // tbPesquisar
             // 
-            tbPesquisar.Location = new Point(42, 341);
+            tbPesquisar.Location = new Point(322, 398);
             tbPesquisar.Name = "tbPesquisar";
-            tbPesquisar.Size = new Size(193, 23);
+            tbPesquisar.Size = new Size(207, 23);
             tbPesquisar.TabIndex = 1;
             // 
             // btnPesquisar
             // 
-            btnPesquisar.Location = new Point(255, 331);
+            btnPesquisar.Location = new Point(349, 427);
             btnPesquisar.Name = "btnPesquisar";
             btnPesquisar.Size = new Size(158, 41);
             btnPesquisar.TabIndex = 2;
@@ -63,7 +63,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(811, 450);
+            ClientSize = new Size(842, 511);
             Controls.Add(btnPesquisar);
             Controls.Add(tbPesquisar);
             Controls.Add(dgvTabelaAdotante);
