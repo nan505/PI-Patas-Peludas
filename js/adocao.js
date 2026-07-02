@@ -108,10 +108,6 @@ formAdocao.addEventListener('submit', function(eventoSubmit){
     const campoIdade = document.getElementById('idade')
     const intIdade = parseInt(campoIdade.value) ?? null
 
-    if(regexNumeros.test(intIdade) == false){
-        mensagemErro.innerText = "Campo idade permite apenas números"
-        return
-    }
     if(campoIdade.value.length != 2){
          mensagemErro.innerText = "Campo de idade possui o maximo de 2 digitos"
          return
