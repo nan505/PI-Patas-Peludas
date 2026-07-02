@@ -39,16 +39,16 @@
             dgvTbAnimais.AllowUserToAddRows = false;
             dgvTbAnimais.AllowUserToDeleteRows = false;
             dgvTbAnimais.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTbAnimais.Location = new Point(59, 12);
+            dgvTbAnimais.Location = new Point(178, 12);
             dgvTbAnimais.Name = "dgvTbAnimais";
             dgvTbAnimais.ReadOnly = true;
-            dgvTbAnimais.Size = new Size(697, 290);
+            dgvTbAnimais.Size = new Size(708, 473);
             dgvTbAnimais.TabIndex = 0;
             // 
             // tBoxNome
             // 
             tBoxNome.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tBoxNome.Location = new Point(59, 342);
+            tBoxNome.Location = new Point(12, 30);
             tBoxNome.Name = "tBoxNome";
             tBoxNome.Size = new Size(160, 35);
             tBoxNome.TabIndex = 1;
@@ -56,9 +56,9 @@
             // btnConsultarNome
             // 
             btnConsultarNome.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnConsultarNome.Location = new Point(225, 342);
+            btnConsultarNome.Location = new Point(12, 71);
             btnConsultarNome.Name = "btnConsultarNome";
-            btnConsultarNome.Size = new Size(157, 35);
+            btnConsultarNome.Size = new Size(160, 35);
             btnConsultarNome.TabIndex = 2;
             btnConsultarNome.Text = "Pesquisar nome";
             btnConsultarNome.UseVisualStyleBackColor = true;
@@ -68,7 +68,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(898, 510);
             Controls.Add(btnConsultarNome);
             Controls.Add(tBoxNome);
             Controls.Add(dgvTbAnimais);

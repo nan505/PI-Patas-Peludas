@@ -35,7 +35,7 @@
             // btnTbAnimais
             // 
             btnTbAnimais.Font = new Font("Segoe UI", 15.75F);
-            btnTbAnimais.Location = new Point(212, 186);
+            btnTbAnimais.Location = new Point(152, 109);
             btnTbAnimais.Name = "btnTbAnimais";
             btnTbAnimais.Size = new Size(140, 79);
             btnTbAnimais.TabIndex = 0;
@@ -46,7 +46,7 @@
             // btnTbAdotantes
             // 
             btnTbAdotantes.Font = new Font("Segoe UI", 15.75F);
-            btnTbAdotantes.Location = new Point(358, 186);
+            btnTbAdotantes.Location = new Point(298, 109);
             btnTbAdotantes.Name = "btnTbAdotantes";
             btnTbAdotantes.Size = new Size(140, 79);
             btnTbAdotantes.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(595, 298);
             Controls.Add(btnTbAdotantes);
             Controls.Add(btnTbAnimais);
             Name = "FormInicio";
